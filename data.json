@@ -1,37 +1,66 @@
 [
   {
-    "id": "RE001",
-    "title": "Elevator System (Aufzugsanlage)",
-    "description": "Vertical transportation systems for moving people or goods between floors.",
-    "tags": ["Technical Object", "Architecture"],
-    "image": "https://images.unsplash.com/photo-1542144612-1b3641ec3459?auto=format&fit=crop&w=600&q=80",
+    "id": "re-001",
+    "title": "Aufzugsanlage",
+    "shortDescription": "Vertikale Beförderungsanlagen (Aufzüge, Fahrtreppen).",
+    "description": "Eine Aufzugsanlage ist eine technische Anlage, die dazu dient, Personen oder Lasten in einer Kabine oder auf einer Plattform vertikal oder schräg zwischen zwei oder mehreren Ebenen zu transportieren.",
+    "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80",
+    "tags": ["Konzept", "BBL"],
     "meta": {
-      "FID": "ABC-123",
-      "GUID": "1756115623...",
-      "System": "SAP RE-FX"
+      "fachliche_id": "ANL-01",
+      "guid": "1756115623450x131157702840746900",
+      "termdat": "https://www.termdat.bk.admin.ch/entry/520737",
+      "fachbereich": "Immobilienmanagement",
+      "system": "SAP RE-FX",
+      "klassifizierung": "Öffentlich"
     },
     "attributes": [
-      { "name": "Technical ID", "format": "Text", "key": "PK", "description": "Unique identifier in maintenance system" },
-      { "name": "Manufacturer", "format": "Text", "key": "-", "description": "Name of the elevator producer" },
-      { "name": "Load Capacity", "format": "Integer (kg)", "key": "-", "description": "Maximum weight allowed" },
-      { "name": "Installation Date", "format": "Date", "key": "-", "description": "Date of initial commissioning" }
+      { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutiger Identifikator" },
+      { "name": "Gebäude_ID", "format": "Text", "key": "FK", "list": "-", "desc": "Referenz zum Gebäude" },
+      { "name": "Tragkraft", "format": "Ganzzahl", "key": "-", "list": "-", "desc": "Maximale Zuladung in KG" },
+      { "name": "Baujahr", "format": "Datum", "key": "-", "list": "-", "desc": "Jahr der Inbetriebnahme" },
+      { "name": "Hersteller", "format": "Text", "key": "-", "list": "Hersteller_Liste", "desc": "Name der Errichterfirma" }
     ]
   },
   {
-    "id": "RE002",
-    "title": "Plot of Land (Grundstück)",
-    "description": "Spatially delimited part of the earth's surface with distinct property rights.",
-    "tags": ["Legal", "Spatial"],
-    "image": "https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=600&q=80",
+    "id": "re-002",
+    "title": "Grundstück",
+    "shortDescription": "Räumlich abgrenzbare Bodeneinheit mit eigenständigen Eigentumsrechten.",
+    "description": "Ein Grundstück ist ein abgegrenzter Teil der Erdoberfläche, der im Grundbuch auf einem gesonderten Grundbuchblatt geführt wird.",
+    "image": "https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=800&q=80",
+    "tags": ["Konzept", "BBL"],
     "meta": {
-      "FID": "LND-999",
-      "GUID": "888273645...",
-      "System": "GIS"
+      "fachliche_id": "LND-99",
+      "guid": "888115623450x131157702840746900",
+      "termdat": "https://www.termdat.bk.admin.ch/entry/12345",
+      "fachbereich": "Liegenschaften",
+      "system": "GIS / SAP",
+      "klassifizierung": "Vertraulich"
     },
     "attributes": [
-      { "name": "Plot Number", "format": "Text", "key": "PK", "description": "Official cadastral number" },
-      { "name": "Surface Area", "format": "Decimal (m2)", "key": "-", "description": "Total area in square meters" },
-      { "name": "Zoning Type", "format": "Text", "key": "FK", "description": "Reference to zoning catalog" }
+      { "name": "Parzellen_Nr", "format": "Text", "key": "PK", "list": "-", "desc": "Amtliche Nummer" },
+      { "name": "E-GRID", "format": "Text", "key": "-", "list": "-", "desc": "Eidgenössische Grundstücks-Identifikation" },
+      { "name": "Fläche_m2", "format": "Dezimalzahl", "key": "-", "list": "-", "desc": "Amtlich vermessene Fläche" }
+    ]
+  },
+  {
+    "id": "re-003",
+    "title": "Gebäude",
+    "shortDescription": "Mit dem Boden fest verbundenes Bauwerk mit eindeutiger Identifikation.",
+    "description": "Bauwerk, das Räume umschliesst, betreten werden kann und dem Schutz von Menschen, Tieren oder Sachen dient.",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+    "tags": ["Konzept", "BBL"],
+    "meta": {
+      "fachliche_id": "BLD-55",
+      "guid": "999115623450x131157702840746900",
+      "termdat": "-",
+      "fachbereich": "Asset Management",
+      "system": "SAP RE-FX",
+      "klassifizierung": "Öffentlich"
+    },
+    "attributes": [
+      { "name": "EGID", "format": "Ganzzahl", "key": "PK", "list": "-", "desc": "Eidgenössischer Gebäude-Identifikator" },
+      { "name": "Versicherungsnummer", "format": "Text", "key": "-", "list": "-", "desc": "GVZ Nummer" }
     ]
   }
 ]
