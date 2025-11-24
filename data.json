@@ -1,0 +1,37 @@
+[
+  {
+    "id": "RE001",
+    "title": "Elevator System (Aufzugsanlage)",
+    "description": "Vertical transportation systems for moving people or goods between floors.",
+    "tags": ["Technical Object", "Architecture"],
+    "image": "https://images.unsplash.com/photo-1542144612-1b3641ec3459?auto=format&fit=crop&w=600&q=80",
+    "meta": {
+      "FID": "ABC-123",
+      "GUID": "1756115623...",
+      "System": "SAP RE-FX"
+    },
+    "attributes": [
+      { "name": "Technical ID", "format": "Text", "key": "PK", "description": "Unique identifier in maintenance system" },
+      { "name": "Manufacturer", "format": "Text", "key": "-", "description": "Name of the elevator producer" },
+      { "name": "Load Capacity", "format": "Integer (kg)", "key": "-", "description": "Maximum weight allowed" },
+      { "name": "Installation Date", "format": "Date", "key": "-", "description": "Date of initial commissioning" }
+    ]
+  },
+  {
+    "id": "RE002",
+    "title": "Plot of Land (Grundstück)",
+    "description": "Spatially delimited part of the earth's surface with distinct property rights.",
+    "tags": ["Legal", "Spatial"],
+    "image": "https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=600&q=80",
+    "meta": {
+      "FID": "LND-999",
+      "GUID": "888273645...",
+      "System": "GIS"
+    },
+    "attributes": [
+      { "name": "Plot Number", "format": "Text", "key": "PK", "description": "Official cadastral number" },
+      { "name": "Surface Area", "format": "Decimal (m2)", "key": "-", "description": "Total area in square meters" },
+      { "name": "Zoning Type", "format": "Text", "key": "FK", "description": "Reference to zoning catalog" }
+    ]
+  }
+]
