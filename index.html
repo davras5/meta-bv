@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Data Catalog</title>
+    <style>
+        /* --- SWISS CORPORATE DESIGN STYLE --- */
+        :root {
+            --primary-red: #DC0018; /* Swiss Federal Red */
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-gray: #F5F5F5;
+            --border-color: #E5E5E5;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: var(--bg-gray);
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            border-bottom: 3px solid var(--primary-red);
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo-box {
+            background: var(--primary-red);
+            color: white;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        h1 { margin: 0; font-size: 1.2rem; font-weight: 400; color: var(--text-dark); }
+        
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* --- VIEW: CATALOG LIST --- */
+        .search-container {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 10px;
+        }
+
+        input#search {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 0; /* Square edges for corporate look */
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Card Design */
+        .card {
+            background: white;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            height: 180px;
+            background-color: #eee;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-body { padding: 20px; flex-grow: 1; }
+        .card-tags { margin-bottom: 10px; }
+        
+        .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border: 1px solid #999;
+            border-radius: 12px;
+            color: #555;
+            margin-right: 5px;
+            background: white;
+        }
+
+        .card-title { font-size: 1.1rem; font-weight: bold; margin: 0 0 10px 0; }
+        .card-desc { font-size: 0.9rem; color: var(--text-light); }
+        .arrow-icon { color: var(--primary-red); float: right; margin-top: 10px; }
+
+        /* --- VIEW: DETAIL PAGE --- */
+        #detail-view { display: none; background: white; padding: 40px; border: 1px solid var(--border-color); }
+        
+        .back-btn {
+            background: none;
+            border: none;
+            color: var(--primary-red);
+            cursor: pointer;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            padding: 0;
+            text-decoration: underline;
+        }
+
+        .detail-header { display: flex; gap: 40px; margin-bottom: 40px; }
+        .detail-img { width: 300px; height: 200px; object-fit: cover; background: #eee; }
+        .detail-info { flex: 1; }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 10px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .meta-label { font-weight: bold; color: var(--text-dark); }
+
+        /* Attribute Table */
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem; }
+        th { text-align: left; background: #F9F9F9; padding: 12px; border-bottom: 2px solid #ddd; font-weight: bold; }
+        td { padding: 12px; border-bottom: 1px solid #eee; color: var(--text-dark); }
+        
+        .badge-pk { background: #333; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; }
+        .badge-fk { border: 1px solid #333; color: #333; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">+</div>
+        <div>
+            <h1><strong>Data Catalog</strong> | Real Estate Model</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="list-view">
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search concepts (e.g. 'Elevator', 'Plot')...">
+            </div>
+            <div id="grid-container" class="grid">
+                </div>
+        </div>
+
+        <div id="detail-view">
+            <button class="back-btn" onclick="showList()">← Back to Catalog</button>
+            <div id="detail-content">
+                </div>
+        </div>
+    </div>
+
+    <script>
+        let db = []; // Store data here
+
+        // 1. Fetch Data on Load
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                db = data;
+                renderList(db);
+            })
+            .catch(err => console.error("Could not load data.json. Are you running a local server?", err));
+
+        // 2. Render Grid
+        const gridContainer = document.getElementById('grid-container');
+        
+        function renderList(items) {
+            gridContainer.innerHTML = '';
+            items.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.onclick = () => showDetail(item.id);
+                
+                // Create Tags HTML
+                const tagsHtml = item.tags.map(t => `<span class="tag">${t}</span>`).join('');
+
+                card.innerHTML = `
+                    <div class="card-img" style="background-image: url('${item.image}')"></div>
+                    <div class="card-body">
+                        <div class="card-tags">${tagsHtml}</div>
+                        <h3 class="card-title">${item.title}</h3>
+                        <p class="card-desc">${item.description}</p>
+                        <div class="arrow-icon">→</div>
+                    </div>
+                `;
+                gridContainer.appendChild(card);
+            });
+        }
+
+        // 3. Render Detail
+        const detailView = document.getElementById('detail-view');
+        const listView = document.getElementById('list-view');
+        const detailContent = document.getElementById('detail-content');
+
+        function showDetail(id) {
+            const item = db.find(x => x.id === id);
+            if(!item) return;
+
+            // Generate Attribute Rows
+            const rows = item.attributes.map(attr => {
+                let keyBadge = '';
+                if(attr.key === 'PK') keyBadge = '<span class="badge-pk">PK</span>';
+                if(attr.key === 'FK') keyBadge = '<span class="badge-fk">FK</span>';
+
+                return `<tr>
+                    <td><strong>${attr.name}</strong></td>
+                    <td><span style="border:1px solid #ccc; padding:2px 8px; border-radius:10px;">${attr.format}</span></td>
+                    <td>${keyBadge}</td>
+                    <td>${attr.description}</td>
+                </tr>`;
+            }).join('');
+
+            detailContent.innerHTML = `
+                <div class="detail-header">
+                    <img src="${item.image}" class="detail-img">
+                    <div class="detail-info">
+                        <h2 style="margin-top:0">${item.title}</h2>
+                        <p>${item.description}</p>
+                        
+                        <div class="meta-grid">
+                            <span class="meta-label">Fachliche ID:</span> <span>${item.meta.FID}</span>
+                            <span class="meta-label">GUID:</span> <span>${item.meta.GUID}</span>
+                            <span class="meta-label">Source System:</span> <span>${item.meta.System}</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Attributes</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NAME</th>
+                            <th>FORMAT</th>
+                            <th>KEY</th>
+                            <th>DESCRIPTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${rows}
+                    </tbody>
+                </table>
+            `;
+
+            listView.style.display = 'none';
+            detailView.style.display = 'block';
+            window.scrollTo(0,0);
+        }
+
+        function showList() {
+            detailView.style.display = 'none';
+            listView.style.display = 'block';
+        }
+
+        // 4. Search Functionality
+        document.getElementById('search').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = db.filter(item => 
+                item.title.toLowerCase().includes(term) || 
+                item.description.toLowerCase().includes(term)
+            );
+            renderList(filtered);
+        });
+
+    </script>
+</body>
+</html>
