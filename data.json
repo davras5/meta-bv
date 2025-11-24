@@ -1,66 +1,94 @@
 [
   {
-    "id": "re-001",
+    "id": "1",
     "title": "Aufzugsanlage",
-    "shortDescription": "Vertikale Beförderungsanlagen (Aufzüge, Fahrtreppen).",
-    "description": "Eine Aufzugsanlage ist eine technische Anlage, die dazu dient, Personen oder Lasten in einer Kabine oder auf einer Plattform vertikal oder schräg zwischen zwei oder mehreren Ebenen zu transportieren.",
+    "description": "Vertikale Beförderungsanlagen (Aufzüge, Fahrtreppen).",
+    "fullDescription": "Eine Aufzugsanlage ist eine technische Anlage, die dazu dient, Personen oder Lasten in einer Kabine oder auf einer Plattform vertikal oder schräg zwischen zwei oder mehreren Ebenen zu transportieren.",
     "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80",
-    "tags": ["Konzept", "BBL"],
+    "topTags": ["Konzept", "BBL"],
+    "bottomTags": ["Architektonische Sicht", "Technische Objekte"],
     "meta": {
-      "fachliche_id": "ANL-01",
+      "fachliche_id": "Wert ABC",
       "guid": "1756115623450x131157702840746900",
       "termdat": "https://www.termdat.bk.admin.ch/entry/520737",
-      "fachbereich": "Immobilienmanagement",
-      "system": "SAP RE-FX",
-      "klassifizierung": "Öffentlich"
+      "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
+      "system": "ERP SAP RE-FX",
+      "klassifizierung": "Öffentlich / Intern / Vertraulich",
+      "personenbezogen": "Ja / Nein",
+      "kommentar": "Freitext für Kommentar",
+      "version": "V 1.0"
     },
+    "standards": [
+        { "name": "ISO 16739 (IFC)", "value": "Wert ABC" },
+        { "name": "eBKP-H", "value": "Wert ABC" },
+        { "name": "DIN 276", "value": "Wert ABC" }
+    ],
     "attributes": [
-      { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutiger Identifikator" },
-      { "name": "Gebäude_ID", "format": "Text", "key": "FK", "list": "-", "desc": "Referenz zum Gebäude" },
-      { "name": "Tragkraft", "format": "Ganzzahl", "key": "-", "list": "-", "desc": "Maximale Zuladung in KG" },
-      { "name": "Baujahr", "format": "Datum", "key": "-", "list": "-", "desc": "Jahr der Inbetriebnahme" },
-      { "name": "Hersteller", "format": "Text", "key": "-", "list": "Hersteller_Liste", "desc": "Name der Errichterfirma" }
+      { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Beschreibung ABC" },
+      { "name": "Relation ABC", "format": "Text", "key": "FK", "list": "-", "desc": "Beschreibung ABC" },
+      { "name": "Merkmal ABC", "format": "Dezimalzahl", "key": "-", "list": "-", "desc": "Beschreibung ABC" },
+      { "name": "Merkmal ABC", "format": "Währung", "key": "-", "list": "-", "desc": "Beschreibung ABC" },
+      { "name": "Merkmal ABC", "format": "Text", "key": "-", "list": "Werteliste ABC", "desc": "Beschreibung ABC" }
     ]
   },
   {
-    "id": "re-002",
+    "id": "2",
     "title": "Grundstück",
-    "shortDescription": "Räumlich abgrenzbare Bodeneinheit mit eigenständigen Eigentumsrechten.",
-    "description": "Ein Grundstück ist ein abgegrenzter Teil der Erdoberfläche, der im Grundbuch auf einem gesonderten Grundbuchblatt geführt wird.",
+    "description": "Räumlich abgrenzbare Bodeneinheit mit eigenständigen Eigentumsrechten gemäss ZGB...",
+    "fullDescription": "Detaillierte Beschreibung für Grundstück...",
     "image": "https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=800&q=80",
-    "tags": ["Konzept", "BBL"],
-    "meta": {
-      "fachliche_id": "LND-99",
-      "guid": "888115623450x131157702840746900",
-      "termdat": "https://www.termdat.bk.admin.ch/entry/12345",
-      "fachbereich": "Liegenschaften",
-      "system": "GIS / SAP",
-      "klassifizierung": "Vertraulich"
-    },
-    "attributes": [
-      { "name": "Parzellen_Nr", "format": "Text", "key": "PK", "list": "-", "desc": "Amtliche Nummer" },
-      { "name": "E-GRID", "format": "Text", "key": "-", "list": "-", "desc": "Eidgenössische Grundstücks-Identifikation" },
-      { "name": "Fläche_m2", "format": "Dezimalzahl", "key": "-", "list": "-", "desc": "Amtlich vermessene Fläche" }
-    ]
+    "topTags": ["Konzept", "BBL"],
+    "bottomTags": ["Architektonische Sicht", "Räumliche Struktur"],
+    "meta": { "fachliche_id": "LND-01" },
+    "standards": [],
+    "attributes": []
   },
   {
-    "id": "re-003",
-    "title": "Gebäude",
-    "shortDescription": "Mit dem Boden fest verbundenes Bauwerk mit eindeutiger Identifikation.",
-    "description": "Bauwerk, das Räume umschliesst, betreten werden kann und dem Schutz von Menschen, Tieren oder Sachen dient.",
+    "id": "3",
+    "title": "Bodenbedeckung",
+    "description": "Versiegelte und unversiegelte Flächen gemäss amtlicher Vermessung. Umfasst Gebäude...",
+    "fullDescription": "Detaillierte Beschreibung...",
     "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-    "tags": ["Konzept", "BBL"],
-    "meta": {
-      "fachliche_id": "BLD-55",
-      "guid": "999115623450x131157702840746900",
-      "termdat": "-",
-      "fachbereich": "Asset Management",
-      "system": "SAP RE-FX",
-      "klassifizierung": "Öffentlich"
-    },
-    "attributes": [
-      { "name": "EGID", "format": "Ganzzahl", "key": "PK", "list": "-", "desc": "Eidgenössischer Gebäude-Identifikator" },
-      { "name": "Versicherungsnummer", "format": "Text", "key": "-", "list": "-", "desc": "GVZ Nummer" }
-    ]
+    "topTags": ["Konzept", "BBL"],
+    "bottomTags": ["Architektonische Sicht", "Räumliche Struktur"],
+    "meta": { "fachliche_id": "COV-01" },
+    "standards": [],
+    "attributes": []
+  },
+  {
+    "id": "4",
+    "title": "Beleuchtungsanlage",
+    "description": "Beleuchtungssysteme inkl. Steuerung und Notbeleuchtung.",
+    "fullDescription": "Detaillierte Beschreibung...",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+    "topTags": ["Konzept", "BBL"],
+    "bottomTags": ["Technische Objekte"],
+    "meta": { "fachliche_id": "LGT-01" },
+    "standards": [],
+    "attributes": []
+  },
+  {
+    "id": "5",
+    "title": "Gebäude",
+    "description": "Mit dem Boden fest verbundenes Bauwerk mit eindeutiger Identifikation gemäss VGWR.",
+    "fullDescription": "Detaillierte Beschreibung...",
+    "image": "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=800&q=80",
+    "topTags": ["Konzept", "BBL"],
+    "bottomTags": ["Architektonische Sicht"],
+    "meta": { "fachliche_id": "BLD-01" },
+    "standards": [],
+    "attributes": []
+  },
+  {
+    "id": "6",
+    "title": "Geschoss",
+    "description": "Horizontale Gliederungsebene innerhalb eines Gebäudes mit eindeutiger Höhenlage.",
+    "fullDescription": "Detaillierte Beschreibung...",
+    "image": "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80",
+    "topTags": ["Konzept", "BBL"],
+    "bottomTags": ["Räumliche Struktur"],
+    "meta": { "fachliche_id": "FLR-01" },
+    "standards": [],
+    "attributes": []
   }
 ]
