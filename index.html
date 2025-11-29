@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logisches Datenmodell</title>
+    <title>Konzepte</title>
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
 
@@ -421,7 +421,7 @@
             </div>
 
             <div class="nav-tabs" id="nav-tabs">
-                <div id="tab-model" class="nav-link active" data-page="model">Logisches Datenmodell</div>
+                <div id="tab-concept" class="nav-link active" data-page="concept">Konzepte</div>
                 <div id="tab-about" class="nav-link" data-page="about">Über diesen Datenkatalog</div>
                 <div id="tab-handbuch" class="nav-link" data-page="handbuch">Handbuch</div>
             </div>
@@ -429,7 +429,7 @@
 
         <div class="sub-header">
             <div class="breadcrumbs" id="breadcrumbs">
-                Startseite <span>></span> Logisches Datenmodell
+                Startseite <span>></span> Konzepte
             </div>
             <div class="action-icons">
                 <div class="icon-btn" title="Print"><span class="material-symbols-rounded">print</span></div>
@@ -439,7 +439,7 @@
 
         <main>
             <div id="view-catalog">
-                <h1 class="page-title">Logisches Datenmodell</h1>
+                <h1 class="page-title">Konzepte</h1>
                 
                 <div class="toolbar">
                     <div class="search-group">
@@ -738,7 +738,7 @@ BBL Immobilienkatalog (dcat:Catalog)
             let db = [];
             let currentView = 'grid'; // 'grid' or 'list'
             let currentFilter = '';
-            let currentPage = 'model'; // 'model', 'about', or 'handbuch'
+            let currentPage = 'concept'; // 'concept', 'about', or 'handbuch'
 
             // 1. Initialize & Event Listener Setup
             async function init() {
@@ -794,7 +794,7 @@ BBL Immobilienkatalog (dcat:Catalog)
                 } else if (hash.startsWith('#/handbuch')) {
                     navigate('handbuch');
                 } else {
-                    navigate('model');
+                    navigate('concept');
                 }
             }
 
@@ -802,16 +802,16 @@ BBL Immobilienkatalog (dcat:Catalog)
                 const breadcrumbsEl = document.getElementById('breadcrumbs');
                 if (!breadcrumbsEl) return; 
 
-                let breadcrumbsHtml = `<a href="#/model">Startseite</a> <span>></span> `;
+                let breadcrumbsHtml = `<a href="#/concept">Startseite</a> <span>></span> `;
                 
-                if (page === 'model') {
-                    breadcrumbsHtml += `Logisches Datenmodell`;
+                if (page === 'concept') {
+                    breadcrumbsHtml += `Konzepte`;
                 } else if (page === 'about') {
                     breadcrumbsHtml += `Über diesen Datenkatalog`;
                 } else if (page === 'handbuch') {
                     breadcrumbsHtml += `Handbuch`;
                 } else if (page === 'detail') {
-                    breadcrumbsHtml += `<a href="#/model">Logisches Datenmodell</a> <span>></span> ${title}`;
+                    breadcrumbsHtml += `<a href="#/concept">Konzepte</a> <span>></span> ${title}`;
                 }
 
                 breadcrumbsEl.innerHTML = breadcrumbsHtml;
@@ -822,9 +822,9 @@ BBL Immobilienkatalog (dcat:Catalog)
 
                 // Update tab highlighting
                 document.querySelectorAll('.nav-link').forEach(tab => tab.classList.remove('active'));
-                if (page === 'model' || page === 'detail') {
-                    const modelTab = document.getElementById('tab-model');
-                    if (modelTab) modelTab.classList.add('active');
+                if (page === 'concept' || page === 'detail') {
+                    const conceptTab = document.getElementById('tab-concept');
+                    if (conceptTab) conceptTab.classList.add('active');
                 } else {
                     const specificTab = document.getElementById(`tab-${page}`);
                     if (specificTab) specificTab.classList.add('active');
@@ -841,11 +841,11 @@ BBL Immobilienkatalog (dcat:Catalog)
                 const toolbar = document.querySelector('.toolbar');
                 const actionIcons = document.querySelector('.action-icons');
 
-                if (page === 'model') {
+                if (page === 'concept') {
                     document.getElementById('view-catalog')?.classList.remove('hidden');
                     if (toolbar) toolbar.style.display = 'flex';
                     if (actionIcons) actionIcons.style.display = 'flex';
-                    setBreadcrumbs('model');
+                    setBreadcrumbs('concept');
                     renderCurrentView();
                 } else if (page === 'about') {
                     document.getElementById('view-about')?.classList.remove('hidden');
@@ -962,7 +962,7 @@ BBL Immobilienkatalog (dcat:Catalog)
             // 6. Detail View Renderer
             function renderDetail(id) {
                 const item = db.find(x => x.id === id);
-                if (!item) return navigate('model');
+                if (!item) return navigate('concept');
 
                 // Toggle Views
                 document.getElementById('view-catalog')?.classList.add('hidden');
