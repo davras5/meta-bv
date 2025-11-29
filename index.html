@@ -36,6 +36,7 @@
             --shadow-card-hover: 0 10px 25px rgba(0,0,0,0.08);
             
             --filter-panel-width: 280px;
+            --border-input: #999;
         }
 
         *, *::before, *::after { box-sizing: border-box; }
@@ -189,7 +190,7 @@
         .input-wrapper input {
             width: 100%; 
             padding: 10px var(--spacing-sm) 10px 48px;
-            border: 1px solid #999; 
+            border: 1px solid var(--border-input); 
             border-radius: var(--radius-sm); 
             font-size: 16px; 
             height: 46px;
@@ -208,7 +209,7 @@
             height: 46px; 
             padding: 0 24px; 
             background: white;
-            border: 1px solid var(--text-dark); 
+            border: 1px solid var(--border-input); 
             border-radius: var(--radius-sm);
             font-size: 15px; 
             font-weight: bold;
@@ -258,7 +259,7 @@
             height: 46px;
             padding: 0 20px;
             background: white;
-            border: 1px solid var(--border);
+            border: 1px solid var(--border-input);
             border-radius: var(--radius-sm);
             font-size: 15px;
             display: flex;
@@ -288,7 +289,7 @@
             transition: background-color 0.2s;
         }
         .toggle-icon.active { background: #666; color: white; pointer-events: none; }
-        .toggle-icon.inactive { background: white; color: var(--text-dark); border: 1px solid var(--border); }
+        .toggle-icon.inactive { background: white; color: var(--text-dark); border: 1px solid var(--border-input); }
         .toggle-icon.inactive:hover { background: var(--bg-gray); }
 
         /* === 7. CATALOG LAYOUT (Filter + Content) === */
@@ -370,7 +371,7 @@
             align-items: center;
             gap: 6px;
             padding: 8px 10px;
-            border: 1px solid #999;
+            border: 1px solid var(--border-input);
             border-radius: var(--radius-sm);
             background: white;
             cursor: text;
@@ -533,6 +534,17 @@
             border-color: #666;
             color: #000;
         }
+        
+        .tag-pill.tag-pill--active {
+            background: var(--text-dark);
+            color: white;
+            border-color: var(--text-dark);
+        }
+        
+        .tag-pill.tag-pill--active:hover {
+            background: #444;
+            border-color: #444;
+        }
 
         /* === 11. LIST VIEW === */
         .list-table { width: 100%; border-collapse: collapse; font-size: 15px; }
@@ -556,6 +568,7 @@
         .col-title { font-weight: 700; font-size: 16px; color: var(--text-black); width: 25%; }
         .col-desc { color: var(--text-black); line-height: 1.5; }
         .col-tags { width: 30%; text-align: right; }
+        .col-tags .tag-pill { margin-left: 5px; margin-bottom: 5px; }
 
         /* === 12. DETAIL VIEW === */
         .detail-hero { display: flex; gap: var(--spacing-xl); margin-bottom: 60px; margin-top: var(--spacing-md); }
@@ -1135,10 +1148,11 @@
             return `<div class="data-row"><div class="data-row-key">${label}</div><div class="data-row-val">${formatValue(value, type)}</div></div>`;
         }
 
-        function createTags(tags, clickable = true) {
-            return tags.map(t => 
-                `<span class="tag-pill" ${clickable ? `data-tag="${t}"` : ''}>${t}</span>`
-            ).join('');
+        function createTags(tags, activeTags = []) {
+            return tags.map(t => {
+                const isActive = activeTags.includes(t);
+                return `<span class="tag-pill${isActive ? ' tag-pill--active' : ''}" data-tag="${t}">${t}</span>`;
+            }).join('');
         }
 
         // === FILTERING ===
@@ -1293,13 +1307,13 @@
                     <div class="card" data-id="${item.id}">
                         <div class="card-img-wrap">
                             <img src="${item.image}" class="card-img" alt="${item.title}">
-                            <div class="tags-overlay">${createTags(item.topTags || [])}</div>
+                            <div class="tags-overlay">${createTags(item.topTags || [], tags)}</div>
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">${item.title}</h3>
                             <p class="card-desc">${item.description}</p>
                             <div class="card-footer">
-                                <div class="tags-bottom">${createTags((item.bottomTags || []).slice(0, 3))}</div>
+                                <div class="tags-bottom">${createTags((item.bottomTags || []).slice(0, 3), tags)}</div>
                                 <div class="btn-arrow"><span class="material-symbols-rounded">arrow_forward</span></div>
                             </div>
                         </div>
@@ -1312,7 +1326,7 @@
                         <tr data-id="${item.id}">
                             <td class="col-title">${item.title}</td>
                             <td class="col-desc">${item.description}</td>
-                            <td class="col-tags">${allTags.map(t => `<span class="tag-pill" data-tag="${t}" style="margin-left:5px;margin-bottom:5px;">${t}</span>`).join('')}</td>
+                            <td class="col-tags">${createTags(allTags, tags)}</td>
                         </tr>
                     `;
                 }).join('');
