@@ -74,5 +74,278 @@
       { "catalog": "Katalog", "value": "Wert ABC" },
       { "catalog": "Katalog", "value": "Wert ABC" }
     ]
+  },
+  {
+    "id": "2",
+    "title": "Grundstücke (SAP Liegenschafteninventar)",
+    "description": "Enthält die Stammdaten aller Grundstücke im Eigentum oder in der Verwaltung des Bundes. Der Datensatz umfasst amtliche Informationen wie Parzellennummern, Katasterdaten, Flächenangaben und Eigentumsverhältnisse.",
+    "fullDescription": "Enthält die Stammdaten aller Grundstücke im Eigentum oder in der Verwaltung des Bundes. Der Datensatz umfasst amtliche Informationen wie Parzellennummern, Katasterdaten, Flächenangaben und Eigentumsverhältnisse. Die Daten sind mit dem eidgenössischen Grundbuch verknüpft und bilden die Basis für das Portfoliomanagement sowie für rechtliche und planerische Entscheidungen.",
+    "image": "https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=800&q=80",
+    "topTags": ["Datensatz", "BBL"],
+    "bottomTags": ["Grundstück", "ERP IMMO"],
+    "meta": {
+      "kontaktstelle": "info@bbl.admin.ch",
+      "ausgabedatum": "15. April 2025",
+      "aktualisierungsintervall": "Quartalsweise",
+      "status": "Veröffentlicht",
+      "klassifizierung": "Intern",
+      "personenbezogen": "Nein",
+      "archivwuerdig": "Ja",
+      "schluesselwoerter": ["Grundstück", "Parzelle", "Kataster"],
+      "thema": "Immobilienmanagement",
+      "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
+      "kommentar": ""
+    },
+    "distributions": [
+      {
+        "name": "Grundstücksdaten Export (DE)",
+        "format": "Excel",
+        "identifikator": "e5f6g7h8-9012-34ef-0123-5678901234ef",
+        "titel": "Grundstücksdaten Export (DE)",
+        "zugriffsUrl": "https://actanova.bbl.admin.ch/documents/grundstuecke.xlsx",
+        "downloadUrl": "https://actanova.bbl.admin.ch/download/grundstuecke.xlsx",
+        "status": "Veröffentlicht",
+        "dateiformat": "XLSX",
+        "lizenz": "terms_by",
+        "bemerkungen": ""
+      },
+      {
+        "name": "Grundstücke API (REST)",
+        "format": "REST",
+        "identifikator": "f6g7h8i9-0123-45fg-1234-6789012345fg",
+        "titel": "Grundstücke API (REST)",
+        "zugriffsUrl": "https://api.bbl.admin.ch/v1/grundstuecke",
+        "downloadUrl": "",
+        "status": "Veröffentlicht",
+        "dateiformat": "JSON",
+        "lizenz": "terms_by",
+        "bemerkungen": "OpenAPI Spec verfügbar"
+      }
+    ],
+    "publications": [
+      { "catalog": "opendata.swiss", "value": "Grundstücke Bund" }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Bauprojekte (SAP Projektcontrolling)",
+    "description": "Führt alle Neu- und Umbauprojekte, die vom Bund verantwortet werden. Der Datensatz enthält Projektinformationen wie Projektnummer, Bezeichnung, Projektphasen, Budget und Zeitplan.",
+    "fullDescription": "Führt alle Neu- und Umbauprojekte, die vom Bund verantwortet werden. Der Datensatz enthält Projektinformationen wie Projektnummer, Bezeichnung, Projektphasen, Budget und Zeitplan. Er dient als zentrale Quelle für das Projektcontrolling, die Ressourcenplanung und das Reporting gegenüber dem Parlament. Die Daten werden wöchentlich aus dem SAP-Projektcontrolling synchronisiert.",
+    "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+    "topTags": ["Datensatz", "BBL"],
+    "bottomTags": ["Bauprojekt", "SAP PS"],
+    "meta": {
+      "kontaktstelle": "projekte@bbl.admin.ch",
+      "ausgabedatum": "1. Mai 2025",
+      "aktualisierungsintervall": "Wöchentlich",
+      "status": "Veröffentlicht",
+      "klassifizierung": "Intern",
+      "personenbezogen": "Nein",
+      "archivwuerdig": "Ja",
+      "schluesselwoerter": ["Bauprojekt", "Projektcontrolling", "Budget"],
+      "thema": "Projektmanagement",
+      "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
+      "kommentar": ""
+    },
+    "distributions": [
+      {
+        "name": "Bauprojekte SAP BW Report",
+        "format": "Excel",
+        "identifikator": "g7h8i9j0-1234-56gh-2345-7890123456gh",
+        "titel": "Bauprojekte SAP BW Report",
+        "zugriffsUrl": "https://sap.bbl.admin.ch/bw/reports/bauprojekte",
+        "downloadUrl": "https://sap.bbl.admin.ch/bw/download/bauprojekte.xlsx",
+        "status": "Veröffentlicht",
+        "dateiformat": "XLSX",
+        "lizenz": "terms_by",
+        "bemerkungen": "Export aus SAP BW"
+      },
+      {
+        "name": "Bauprojekte API (REST)",
+        "format": "REST",
+        "identifikator": "h8i9j0k1-2345-67hi-3456-8901234567hi",
+        "titel": "Bauprojekte API (REST)",
+        "zugriffsUrl": "https://api.bbl.admin.ch/v1/projects",
+        "downloadUrl": "",
+        "status": "Veröffentlicht",
+        "dateiformat": "JSON",
+        "lizenz": "terms_by",
+        "bemerkungen": "OpenAPI Spec verfügbar"
+      }
+    ],
+    "publications": []
+  },
+  {
+    "id": "4",
+    "title": "Mietverträge (SAP RE-FX)",
+    "description": "Dieser Datensatz listet alle Miet- und Pachtverträge, bei denen der Bund als Mieter oder Vermieter auftritt. Er umfasst Vertragsdetails wie Laufzeiten, Konditionen und Kündigungsfristen.",
+    "fullDescription": "Dieser Datensatz listet alle Miet- und Pachtverträge, bei denen der Bund als Mieter oder Vermieter auftritt. Er umfasst Vertragsdetails wie Laufzeiten, Konditionen, Kündigungsfristen und Mietflächen. Die Daten unterstützen das Vertragsmanagement, die Kostenplanung und die strategische Flächenoptimierung. Die Synchronisation mit SAP RE-FX erfolgt täglich.",
+    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80",
+    "topTags": ["Datensatz", "BBL"],
+    "bottomTags": ["Mietvertrag", "SAP RE-FX"],
+    "meta": {
+      "kontaktstelle": "vertraege@bbl.admin.ch",
+      "ausgabedatum": "20. April 2025",
+      "aktualisierungsintervall": "Täglich",
+      "status": "Veröffentlicht",
+      "klassifizierung": "Vertraulich",
+      "personenbezogen": "Ja",
+      "archivwuerdig": "Ja",
+      "schluesselwoerter": ["Mietvertrag", "Pachtvertrag", "RE-FX"],
+      "thema": "Immobilienmanagement",
+      "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
+      "kommentar": "Enthält personenbezogene Daten zu Vertragspartnern"
+    },
+    "distributions": [
+      {
+        "name": "Mietverträge Export (DE)",
+        "format": "Excel",
+        "identifikator": "i9j0k1l2-3456-78ij-4567-9012345678ij",
+        "titel": "Mietverträge Export (DE)",
+        "zugriffsUrl": "https://actanova.bbl.admin.ch/documents/mietvertraege.xlsx",
+        "downloadUrl": "https://actanova.bbl.admin.ch/download/mietvertraege.xlsx",
+        "status": "Veröffentlicht",
+        "dateiformat": "XLSX",
+        "lizenz": "terms_by",
+        "bemerkungen": "Vertraulich - nur für berechtigte Benutzer"
+      },
+      {
+        "name": "Mietverträge API (REST)",
+        "format": "REST",
+        "identifikator": "j0k1l2m3-4567-89jk-5678-0123456789jk",
+        "titel": "Mietverträge API (REST)",
+        "zugriffsUrl": "https://api.bbl.admin.ch/v1/contracts",
+        "downloadUrl": "",
+        "status": "Veröffentlicht",
+        "dateiformat": "JSON",
+        "lizenz": "terms_by",
+        "bemerkungen": "Authentifizierung erforderlich"
+      },
+      {
+        "name": "Mietverträge API (SOAP)",
+        "format": "SOAP",
+        "identifikator": "k1l2m3n4-5678-90kl-6789-1234567890kl",
+        "titel": "Mietverträge API (SOAP)",
+        "zugriffsUrl": "https://api.bbl.admin.ch/soap/contracts",
+        "downloadUrl": "",
+        "status": "Veröffentlicht",
+        "dateiformat": "XML/SOAP",
+        "lizenz": "terms_by",
+        "bemerkungen": "Legacy-Schnittstelle für SAP-Integration"
+      }
+    ],
+    "publications": []
+  },
+  {
+    "id": "5",
+    "title": "Energieverbrauch (SIEMENS Desigo CC)",
+    "description": "Erfasst den Energieverbrauch aller Bundesliegenschaften nach Energieträger. Enthält Verbrauchsdaten für Strom, Wärme, Kälte und Wasser auf Gebäude- und Zählerebene.",
+    "fullDescription": "Erfasst den Energieverbrauch aller Bundesliegenschaften nach Energieträger. Enthält Verbrauchsdaten für Strom, Wärme, Kälte und Wasser auf Gebäude- und Zählerebene. Die Daten werden für das Energiemonitoring, die Nachhaltigkeitsberichterstattung und die Erreichung der Klimaziele 2040 verwendet. Die Messdaten werden stündlich aus den Gebäudeleitsystemen übertragen.",
+    "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80",
+    "topTags": ["Datensatz", "BBL"],
+    "bottomTags": ["Energie", "Desigo CC"],
+    "meta": {
+      "kontaktstelle": "energie@bbl.admin.ch",
+      "ausgabedatum": "1. Januar 2025",
+      "aktualisierungsintervall": "Stündlich",
+      "status": "Veröffentlicht",
+      "klassifizierung": "Intern",
+      "personenbezogen": "Nein",
+      "archivwuerdig": "Ja",
+      "schluesselwoerter": ["Energie", "Verbrauch", "Nachhaltigkeit", "CO2"],
+      "thema": "Nachhaltigkeit",
+      "rechtsgrundlage": "Klimastrategie Bund, Energiegesetz EnG",
+      "kommentar": ""
+    },
+    "distributions": [
+      {
+        "name": "Energiedaten Dashboard Export",
+        "format": "Excel",
+        "identifikator": "l2m3n4o5-6789-01lm-7890-2345678901lm",
+        "titel": "Energiedaten Dashboard Export",
+        "zugriffsUrl": "https://energy.bbl.admin.ch/dashboard/export",
+        "downloadUrl": "https://energy.bbl.admin.ch/download/energiedaten.xlsx",
+        "status": "Veröffentlicht",
+        "dateiformat": "XLSX",
+        "lizenz": "terms_by",
+        "bemerkungen": "Aggregierte Monatswerte"
+      },
+      {
+        "name": "Energie API (REST)",
+        "format": "REST",
+        "identifikator": "m3n4o5p6-7890-12mn-8901-3456789012mn",
+        "titel": "Energie API (REST)",
+        "zugriffsUrl": "https://api.bbl.admin.ch/v1/energy",
+        "downloadUrl": "",
+        "status": "Veröffentlicht",
+        "dateiformat": "JSON",
+        "lizenz": "terms_by",
+        "bemerkungen": "Stündliche Messwerte verfügbar"
+      },
+      {
+        "name": "Energie API (GraphQL)",
+        "format": "GRAPHQL",
+        "identifikator": "n4o5p6q7-8901-23no-9012-4567890123no",
+        "titel": "Energie API (GraphQL)",
+        "zugriffsUrl": "https://api.bbl.admin.ch/graphql",
+        "downloadUrl": "",
+        "status": "Veröffentlicht",
+        "dateiformat": "GraphQL",
+        "lizenz": "terms_by",
+        "bemerkungen": "Flexible Abfragen für Dashboards"
+      }
+    ],
+    "publications": [
+      { "catalog": "opendata.swiss", "value": "Energieverbrauch Bundesgebäude" }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Flächennutzung (CAFM planon)",
+    "description": "Dokumentiert die Nutzung aller Flächen in Bundesgebäuden nach SIA 416. Enthält Informationen zu Raumtypen, Nutzungsarten, Belegungen und Arbeitsplatzzahlen.",
+    "fullDescription": "Dokumentiert die Nutzung aller Flächen in Bundesgebäuden nach SIA 416. Enthält Informationen zu Raumtypen, Nutzungsarten, Belegungen und Arbeitsplatzzahlen. Die Daten bilden die Grundlage für das Flächenmanagement, die Arbeitsplatzplanung und die Optimierung der Raumnutzung. Die Aktualisierung erfolgt bei jeder Änderung im CAFM-System.",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+    "topTags": ["Datensatz", "BBL"],
+    "bottomTags": ["Fläche", "CAFM"],
+    "meta": {
+      "kontaktstelle": "flaechen@bbl.admin.ch",
+      "ausgabedatum": "10. März 2025",
+      "aktualisierungsintervall": "Bei Änderung",
+      "status": "Veröffentlicht",
+      "klassifizierung": "Intern",
+      "personenbezogen": "Nein",
+      "archivwuerdig": "Nein",
+      "schluesselwoerter": ["Fläche", "Raum", "SIA 416", "Arbeitsplatz"],
+      "thema": "Flächenmanagement",
+      "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
+      "kommentar": ""
+    },
+    "distributions": [
+      {
+        "name": "Flächendaten planon Export",
+        "format": "Excel",
+        "identifikator": "o5p6q7r8-9012-34op-0123-5678901234op",
+        "titel": "Flächendaten planon Export",
+        "zugriffsUrl": "https://planon.bbl.admin.ch/export/flaechen",
+        "downloadUrl": "https://planon.bbl.admin.ch/download/flaechen.xlsx",
+        "status": "Veröffentlicht",
+        "dateiformat": "XLSX",
+        "lizenz": "terms_by",
+        "bemerkungen": "Export aus planon CAFM"
+      },
+      {
+        "name": "Flächen API (REST)",
+        "format": "REST",
+        "identifikator": "p6q7r8s9-0123-45pq-1234-6789012345pq",
+        "titel": "Flächen API (REST)",
+        "zugriffsUrl": "https://api.bbl.admin.ch/v1/spaces",
+        "downloadUrl": "",
+        "status": "Veröffentlicht",
+        "dateiformat": "JSON",
+        "lizenz": "terms_by",
+        "bemerkungen": "OpenAPI Spec verfügbar"
+      }
+    ],
+    "publications": []
   }
 ]
