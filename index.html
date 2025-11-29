@@ -224,21 +224,55 @@
         }
         
         .filter-count {
-            display: inline-flex;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--swiss-red);
+            background: #666;
             color: white;
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 700;
-            min-width: 20px;
-            height: 20px;
-            padding: 0 6px;
-            border-radius: 10px;
-            margin-left: 4px;
+            min-width: 24px;
+            height: 24px;
+            padding: 0 7px;
+            border-radius: 12px;
         }
         
         .filter-count.hidden {
+            display: none;
+        }
+        
+        .btn-filter.active {
+            background: var(--text-dark);
+            color: white;
+            border-color: var(--text-dark);
+        }
+        
+        .btn-filter.active:hover {
+            background: #444;
+        }
+        
+        .btn-reset {
+            height: 46px;
+            padding: 0 20px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+        
+        .btn-reset:hover {
+            background: var(--bg-gray);
+            border-color: var(--text-dark);
+        }
+        
+        .btn-reset.hidden {
             display: none;
         }
 
@@ -752,6 +786,10 @@
                             Filter
                             <span class="filter-count hidden" id="filter-count-concept">0</span>
                         </button>
+                        <button class="btn-reset hidden" data-type="concept">
+                            <span class="material-symbols-rounded">replay</span>
+                            Reset
+                        </button>
                     </div>
                     <div class="view-toggles">
                         <div class="toggle-icon" data-view="grid" data-type="concept">
@@ -810,6 +848,10 @@
                             <span class="material-symbols-rounded">filter_list</span>
                             Filter
                             <span class="filter-count hidden" id="filter-count-dataset">0</span>
+                        </button>
+                        <button class="btn-reset hidden" data-type="dataset">
+                            <span class="material-symbols-rounded">replay</span>
+                            Reset
                         </button>
                     </div>
                     <div class="view-toggles">
@@ -1018,7 +1060,7 @@
                 type,
                 id,
                 tags: params.get('tags')?.split(',').filter(Boolean) || [],
-                view: params.get('view') || state.ui.view,
+                view: params.get('view') || 'grid',
                 filter: params.get('filter') === 'open'
             };
         }
@@ -1150,12 +1192,17 @@
             const { tags, filter } = parseHash();
             const panel = $(`#filter-panel-${type}`);
             const countEl = $(`#filter-count-${type}`);
+            const filterBtn = $(`.btn-filter[data-type="${type}"]`);
+            const resetBtn = $(`.btn-reset[data-type="${type}"]`);
             const inputField = $(`.tag-input-field[data-type="${type}"]`);
             const searchInput = $(`.tag-search-input[data-type="${type}"]`);
             
             // Update filter panel visibility
             panel.classList.toggle('hidden', !filter);
             state.ui.filterPanelOpen = filter;
+            
+            // Update filter button active state
+            filterBtn.classList.toggle('active', filter);
             
             // Update filter count badge
             if (tags.length > 0) {
@@ -1164,6 +1211,9 @@
             } else {
                 countEl.classList.add('hidden');
             }
+            
+            // Show/hide reset button based on active filters
+            resetBtn.classList.toggle('hidden', tags.length === 0);
             
             // Render active tags in input field
             const existingPills = inputField.querySelectorAll('.tag-pill-active');
@@ -1446,9 +1496,17 @@
                 }
             });
 
-            // Filter reset button
+            // Filter reset button (in panel)
             document.addEventListener('click', e => {
                 const resetBtn = e.target.closest('.filter-reset');
+                if (resetBtn) {
+                    clearTags();
+                }
+            });
+
+            // Reset button (in toolbar, next to filter button)
+            document.addEventListener('click', e => {
+                const resetBtn = e.target.closest('.btn-reset');
                 if (resetBtn) {
                     clearTags();
                 }
@@ -1521,11 +1579,10 @@
                     const tag = tagPill.dataset.tag;
                     const current = parseHash();
                     
-                    // Open filter panel and add tag
-                    updateUrl({ 
-                        tags: current.tags.includes(tag) ? current.tags : [...current.tags, tag],
-                        filter: true 
-                    });
+                    // Add tag to filter (don't toggle panel)
+                    if (!current.tags.includes(tag)) {
+                        updateUrl({ tags: [...current.tags, tag] });
+                    }
                 }
             });
 
