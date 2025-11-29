@@ -234,9 +234,10 @@
         /* === 7. CARDS & GRID === */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            grid-template-columns: repeat(auto-fill, 360px);
             gap: var(--spacing-lg);
             margin-bottom: 80px;
+            justify-content: center;
         }
         }
         @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
