@@ -234,9 +234,10 @@
         /* === 7. CARDS & GRID === */
         .grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
             gap: var(--spacing-lg);
             margin-bottom: 80px;
+        }
         }
         @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
 
@@ -250,7 +251,7 @@
             box-shadow: var(--shadow-card);
             transition: all 0.2s;
             cursor: pointer;
-            max-width: 540px;
+            max-width: 360px;
             width: 100%;
         }
         .card:hover {
