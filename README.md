@@ -12,7 +12,7 @@ Die aktuelle Version des Prototypen ist via GitHub Pages verfügbar:
 
 [**Zur Live-Anwendung**](https://davras5.github.io/meta-bv/ "null")
 
-![Preview](https://raw.githubusercontent.com/davras5/meta-bv/refs/heads/main/Preview.JPG)
+![Preview](images/readme/Preview.JPG)
 
 Technologie
 -----------
