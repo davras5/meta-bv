@@ -6,9 +6,7 @@ This is a prototype **Data Catalog** for the Federal Office for Buildings and Lo
 
 ## Live Demo
 
-The current version of the prototype is available via GitHub Pages:
-
-[**View Live Application**](https://davras5.github.io/meta-bv/)
+- Deployed: https://davras5.github.io/meta-bv/
 
 ![Preview](images/readme/Preview.JPG)
 
