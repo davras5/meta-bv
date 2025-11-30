@@ -49,4 +49,4 @@ This project is designed as a minimalist **single-file web prototype** to ensure
 - **Documentation:** Integrated "About" and "Manual" sections for static concept documentation
 
 ## License
-Licensed under CC BY 4.0
+Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
