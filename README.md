@@ -47,3 +47,6 @@ This project is designed as a minimalist **single-file web prototype** to ensure
 - **Detail View:** Detailed view of business objects including metadata and attribute tables (PK/FK/Format badges)
 - **Corporate Design:** Uses the official Swiss coat of arms and the "Frutiger" font family (via fallback stack) for an authentic Swiss Federal Administration appearance
 - **Documentation:** Integrated "About" and "Manual" sections for static concept documentation
+
+## License
+Licensed under CC BY 4.0
