@@ -1196,8 +1196,8 @@
                 <h1 class="page-title" id="detail-concept-title"></h1>
                 <div class="detail-hero">
                     <div class="detail-info">
-                        <div class="detail-tags" id="detail-concept-tags"></div>
                         <p class="detail-desc" id="detail-concept-desc"></p>
+                        <div class="detail-tags" id="detail-concept-tags"></div>
                     </div>
                     <div class="detail-image-box">
                         <img id="detail-concept-img" src="" alt="">
@@ -1362,7 +1362,6 @@
                     { key: 'klassifizierung', label: 'Klassifizierung', type: 'pill' },
                     { key: 'personenbezogen', label: 'Personenbezogene Daten', type: 'pill' },
                     { key: 'archivwuerdig', label: 'Archivwürdig', type: 'pill' },
-                    { key: 'schluesselwoerter', label: 'Schlüsselwörter', type: 'pills' },
                     { key: 'thema', label: 'Thema', type: 'pill' },
                     { key: 'rechtsgrundlage', label: 'Rechtsgrundlage', type: 'text' },
                     { key: 'kommentar', label: 'Kommentar', type: 'text' }
@@ -1455,7 +1454,7 @@
         function getAllTags(type) {
             const tags = new Set();
             state.data[type].forEach(item => {
-                (item.bottomTags || []).forEach(t => tags.add(t));
+                (item.tags || []).forEach(t => tags.add(t));
             });
             return Array.from(tags).sort((a, b) => a.localeCompare(b, 'de'));
         }
@@ -1540,8 +1539,8 @@
                     item.title.toLowerCase().includes(text) ||
                     item.description.toLowerCase().includes(text);
 
-                // Tag filter (AND logic) - nur bottomTags
-                const itemTags = item.bottomTags || [];
+                // Tag filter (AND logic) - nur tags
+                const itemTags = item.tags || [];
                 const matchesTags = tags.length === 0 ||
                     tags.every(tag => itemTags.includes(tag));
 
@@ -1735,7 +1734,7 @@
                             <h3 class="card-title">${item.title}</h3>
                             <p class="card-desc">${item.description}</p>
                             <div class="card-footer">
-                                <div class="tags-bottom">${createTags((item.bottomTags || []).slice(0, 3), tags)}</div>
+                                <div class="tags-bottom">${createTags((item.tags || []).slice(0, 3), tags)}</div>
                                 <div class="btn-arrow"><span class="material-symbols-rounded">arrow_forward</span></div>
                             </div>
                         </div>
@@ -1746,7 +1745,7 @@
                     <tr data-id="${item.id}">
                         <td class="col-title">${item.title}</td>
                         <td class="col-desc">${item.description}</td>
-                        <td class="col-tags">${createTags(item.bottomTags || [], tags)}</td>
+                        <td class="col-tags">${createTags(item.tags || [], tags)}</td>
                     </tr>
                 `).join('');
             }
@@ -1768,7 +1767,7 @@
             $(`#detail-${type}-title`).textContent = item.title;
             $(`#detail-${type}-desc`).textContent = item.fullDescription || item.description;
             $(`#detail-${type}-img`).src = item.image || '';
-            $(`#detail-${type}-tags`).innerHTML = createTags(item.bottomTags || []);
+            $(`#detail-${type}-tags`).innerHTML = createTags(item.tags || []);
 
             // Responsible Persons
             renderResponsiblePersons(type, item.responsiblePersons);

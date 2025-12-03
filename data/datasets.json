@@ -5,7 +5,7 @@
     "description": "Stammdaten aller Gebäude im Portfolio des Bundes mit Adressen, EGID, Nutzungstyp und Zustandsbewertungen.",
     "fullDescription": "Dieser Datensatz umfasst die Stammdaten aller Gebäude im Portfolio des Bundes. Er enthält grundlegende Informationen wie Adressen, offizielle Gebäudenummern (EGID), Nutzungstyp, Baujahr, Flächenangaben und Zustandsbewertungen. Die Daten dienen als Grundlage für das Bestandsmanagement, die Planung von Instandhaltungsmassnahmen und das strategische Reporting. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
     "image": "images/datasets/Placeholder.jpg",
-    "bottomTags": ["Gebäude", "ERP IMMO"],
+    "tags": ["Gebäude", "ERP IMMO"],
     "meta": {
       "kontaktstelle": "info@bbl.admin.ch",
       "ausgabedatum": "10. Mai 2025",
@@ -14,7 +14,6 @@
       "klassifizierung": "Intern",
       "personenbezogen": "Keine",
       "archivwuerdig": "Ja",
-      "schluesselwoerter": ["Gebäude", "EGID", "Stammdaten", "Liegenschaft"],
       "thema": "Immobilienmanagement",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
       "kommentar": ""
@@ -59,7 +58,7 @@
     "description": "Enthält die Stammdaten aller Grundstücke im Eigentum oder in der Verwaltung des Bundes.",
     "fullDescription": "Enthält die Stammdaten aller Grundstücke im Eigentum oder in der Verwaltung des Bundes. Der Datensatz umfasst amtliche Informationen wie Parzellennummern, Flächenangaben, Zonenart und Eigentumsverhältnisse. Diese Daten bilden die Grundlage für die rechtliche und administrative Verwaltung des Landbesitzes und die Portfolioentwicklung. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
     "image": "images/datasets/Placeholder.jpg",
-    "bottomTags": ["Grundstück", "ERP IMMO"],
+    "tags": ["Grundstück", "ERP IMMO"],
     "meta": {
       "kontaktstelle": "info@bbl.admin.ch",
       "ausgabedatum": "15. April 2025",
@@ -68,7 +67,6 @@
       "klassifizierung": "Intern",
       "personenbezogen": "Keine",
       "archivwuerdig": "Ja",
-      "schluesselwoerter": ["Grundstück", "Parzelle", "Kataster", "Eigentum"],
       "thema": "Immobilienmanagement",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
       "kommentar": ""
@@ -112,7 +110,7 @@
     "description": "Führt alle Neu- und Umbauprojekte, die vom Bund verantwortet werden.",
     "fullDescription": "Führt alle Neu- und Umbauprojekte, die vom Bund verantwortet werden. Der Datensatz beinhaltet dynamische Informationen zu Projektbezeichnung, Standort, Projektart (Neubau, Sanierung), Budget, Zeitplänen (Soll/Ist) und dem aktuellen Projektstatus. Er ist die zentrale Quelle für das Projektcontrolling, die Ressourcenplanung und die strategische Bauplanung. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
     "image": "images/datasets/Placeholder.jpg",
-    "bottomTags": ["Bauprojekt", "ERP IMMO"],
+    "tags": ["Bauprojekt", "ERP IMMO"],
     "meta": {
       "kontaktstelle": "projekte@bbl.admin.ch",
       "ausgabedatum": "1. Mai 2025",
@@ -121,7 +119,6 @@
       "klassifizierung": "Intern",
       "personenbezogen": "Keine",
       "archivwuerdig": "Ja",
-      "schluesselwoerter": ["Bauprojekt", "Projektcontrolling", "Budget", "Neubau", "Sanierung"],
       "thema": "Projektmanagement",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
       "kommentar": ""
@@ -163,7 +160,7 @@
     "description": "Alle Miet- und Pachtverträge des Bundes als Mieter oder Vermieter.",
     "fullDescription": "Dieser Datensatz listet alle Miet- und Pachtverträge, bei denen der Bund als Mieter oder Vermieter auftritt. Erfasst sind Vertragsdetails wie Parteien, Mietobjekt, Laufzeiten, Mietzinse und Zahlungskonditionen. Die Daten sind essenziell für die kaufmännische Vertragsverwaltung, die Finanzbuchhaltung und das Belegungsmanagement. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
     "image": "images/datasets/Placeholder.jpg",
-    "bottomTags": ["Mietvertrag", "ERP IMMO"],
+    "tags": ["Mietvertrag", "ERP IMMO"],
     "meta": {
       "kontaktstelle": "vertraege@bbl.admin.ch",
       "ausgabedatum": "20. April 2025",
@@ -172,7 +169,6 @@
       "klassifizierung": "Vertraulich",
       "personenbezogen": "Personenbezogene Daten",
       "archivwuerdig": "Ja",
-      "schluesselwoerter": ["Mietvertrag", "Pachtvertrag", "RE-FX", "Mietzins"],
       "thema": "Immobilienmanagement",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
       "kommentar": "Enthält personenbezogene Daten zu Vertragspartnern"
@@ -211,7 +207,7 @@
     "description": "Inventar der technischen Grossanlagen in den Gebäuden des Bundes.",
     "fullDescription": "Inventar der technischen Grossanlagen in den Gebäuden des Bundes. Der Datensatz umfasst Systeme wie Heizungs-, Lüftungs- und Klimaanlagen (HLK), Aufzüge, Sicherheits- und Elektroanlagen. Enthalten sind Informationen zu Anlagentyp, Standort, Hersteller, Inbetriebnahmedatum und Wartungszyklen. Dient als Grundlage für das Facility Management, die Planung der Instandhaltung und die Sicherstellung des Betriebs. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
     "image": "images/datasets/Placeholder.jpg",
-    "bottomTags": ["Tag 1", "Tag 2"],
+    "tags": ["Tag 1", "Tag 2"],
     "meta": {
       "kontaktstelle": "technik@bbl.admin.ch",
       "ausgabedatum": "1. März 2025",
@@ -220,7 +216,6 @@
       "klassifizierung": "Intern",
       "personenbezogen": "Keine",
       "archivwuerdig": "Ja",
-      "schluesselwoerter": ["Anlagen", "HLK", "Aufzug", "Wartung", "Facility Management"],
       "thema": "Gebäudetechnik",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
       "kommentar": ""
@@ -259,7 +254,7 @@
     "description": "Metadaten der Bauprojekte aus der Kollaborationsplattform CDE Bund.",
     "fullDescription": "Stellt die Metadaten der Projekte aus der zentralen Kollaborationsplattform Common Data Environment (CDE) des Bundes bereit. Diese Plattform dient dem Austausch von BIM-Modellen, Plänen und technischen Dokumenten während der Planungs- und Ausführungsphase. Der Datensatz enthält Informationen über Projektstruktur, Beteiligte, Dokumentenstatus und Freigabeprozesse und bildet die Grundlage für das digitale Projektmanagement.",
     "image": "images/datasets/Placeholder.jpg",
-    "bottomTags": ["Bauprojekt", "CDE Bund"],
+    "tags": ["Bauprojekt", "CDE Bund"],
     "meta": {
       "kontaktstelle": "bim@bbl.admin.ch",
       "ausgabedatum": "15. Mai 2025",
@@ -268,7 +263,6 @@
       "klassifizierung": "Intern",
       "personenbezogen": "Keine",
       "archivwuerdig": "Ja",
-      "schluesselwoerter": ["BIM", "CDE", "Kollaboration", "Dokumente", "Freigabe"],
       "thema": "Projektmanagement",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
       "kommentar": ""
@@ -307,7 +301,7 @@
     "description": "Visualisiert Bauprojekte als Geometrien im GIS.",
     "fullDescription": "Dieser Datensatz visualisiert Bauprojekte als Geometrien im Geo-Informationssystem. Erfasst wird der Projektperimeter, also der räumliche Geltungsbereich eines Bauvorhabens. Die Daten ermöglichen die kartografische Darstellung von aktuellen und geplanten Baustellen, die Analyse der räumlichen Auswirkungen und die Koordination mit anderen Infrastrukturprojekten. Es ist die geografische Sicht auf die Projektdaten aus dem ERP.",
     "image": "images/datasets/Placeholder.jpg",
-    "bottomTags": ["Bauprojekt", "GIS IMMO"],
+    "tags": ["Bauprojekt", "GIS IMMO"],
     "meta": {
       "kontaktstelle": "gis@bbl.admin.ch",
       "ausgabedatum": "1. April 2025",
@@ -316,7 +310,6 @@
       "klassifizierung": "Intern",
       "personenbezogen": "Keine",
       "archivwuerdig": "Ja",
-      "schluesselwoerter": ["GIS", "Geodaten", "Bauprojekt", "Perimeter", "Karte"],
       "thema": "Geoinformation",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
       "kommentar": ""
@@ -355,7 +348,7 @@
     "description": "Flächenanteile der Bodenbedeckung auf den Grundstücken des Bundes.",
     "fullDescription": "Dieser Datensatz analysiert die Flächenanteile der Bodenbedeckung auf den Grundstücken des Bundes. Er wird durch eine räumliche Verschneidung der eigenen Grundstücks-Geometrien mit den Daten der Amtlichen Vermessung (AV) der Schweiz generiert. Das Resultat sind exakte Bemessungen für verschiedene Nutzungsarten wie Gebäudegrundflächen, versiegelte Flächen (z.B. Parkplätze), Grünflächen und offene Flächen. Die Daten sind eine wichtige Grundlage für Umwelt-Reportings, die Berechnung von Nachhaltigkeitskennzahlen (z.B. Versiegelungsgrad) und die operative Liegenschaftsverwaltung.",
     "image": "images/datasets/Placeholder.jpg",
-    "bottomTags": ["Bodenabdeckung", "GIS IMMO"],
+    "tags": ["Bodenabdeckung", "GIS IMMO"],
     "meta": {
       "kontaktstelle": "gis@bbl.admin.ch",
       "ausgabedatum": "1. April 2025",
@@ -364,7 +357,6 @@
       "klassifizierung": "Intern",
       "personenbezogen": "Keine",
       "archivwuerdig": "Ja",
-      "schluesselwoerter": ["GIS", "Bodenabdeckung", "Versiegelung", "Grünfläche", "Nachhaltigkeit"],
       "thema": "Geoinformation",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
       "kommentar": "Verschneidung mit Amtlicher Vermessung"
@@ -403,7 +395,7 @@
     "description": "Metadaten-Auszug aus dem digitalen Planarchiv DALA.",
     "fullDescription": "Dieser Datensatz ist ein Metadaten-Auszug aus dem digitalen Planarchiv \"DALA\". Er enthält beschreibende Informationen zu archivierten Bauwerksdokumenten wie Grundrissen, Schnitten, Ansichten und technischen Schemata. Erfasst sind Attribute wie Dokumententyp, zugehöriges Gebäude/Bauprojekt, Erstellungsdatum und Planverfasser. Der Datensatz dient der Recherche und Identifikation von Plänen; er enthält nicht die Dokumente selbst, sondern den Verweis darauf.",
     "image": "images/datasets/Placeholder.jpg",
-    "bottomTags": ["Dokument", "Planarchiv DALA"],
+    "tags": ["Dokument", "Planarchiv DALA"],
     "meta": {
       "kontaktstelle": "archiv@bbl.admin.ch",
       "ausgabedatum": "1. Februar 2025",
@@ -412,7 +404,6 @@
       "klassifizierung": "Intern",
       "personenbezogen": "Keine",
       "archivwuerdig": "Ja",
-      "schluesselwoerter": ["Planarchiv", "Dokumente", "Grundrisse", "Schnitte", "DALA"],
       "thema": "Dokumentation",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
       "kommentar": "Metadaten-Index, keine Originaldokumente"
@@ -451,7 +442,7 @@
     "description": "Geometrien und Lagedaten aller Grundstücke im Besitz des Bundes.",
     "fullDescription": "Stellt die Geometrien und geografischen Lagedaten aller Grundstücke im Besitz des Bundes zur Verfügung. Der Datensatz aus dem GIS beinhaltet die exakten Parzellengrenzen und ist mit den Daten der amtlichen Vermessung verknüpft. Er wird für die visuelle Darstellung des Landbesitzes, für die strategische Arealentwicklung und für räumliche Analysen genutzt.",
     "image": "images/datasets/Placeholder.jpg",
-    "bottomTags": ["Grundstück", "GIS IMMO"],
+    "tags": ["Grundstück", "GIS IMMO"],
     "meta": {
       "kontaktstelle": "gis@bbl.admin.ch",
       "ausgabedatum": "1. April 2025",
@@ -460,7 +451,6 @@
       "klassifizierung": "Intern",
       "personenbezogen": "Keine",
       "archivwuerdig": "Ja",
-      "schluesselwoerter": ["GIS", "Grundstück", "Parzelle", "Geometrie", "Karte"],
       "thema": "Geoinformation",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
       "kommentar": "Verknüpft mit Amtlicher Vermessung"
@@ -499,7 +489,7 @@
     "description": "Geodaten aller Gebäude im Portfolio des Bundes aus dem GIS IMMO.",
     "fullDescription": "Dieser Datensatz enthält die Geodaten aller Gebäude im Portfolio des Bundes aus dem Geo-Informationssystem (GIS IMMO). Er umfasst die exakten Standorte und geometrischen Umrisse (Gebäudepolygone) der Bauten. Die Daten dienen als Grundlage für räumliche Analysen, kartografische Darstellungen und die Standortplanung. Es ist die geografische Ergänzung zu den alphanumerischen Stammdaten der Gebäude aus dem ERP.",
     "image": "images/datasets/Placeholder.jpg",
-    "bottomTags": ["Gebäude", "GIS IMMO"],
+    "tags": ["Gebäude", "GIS IMMO"],
     "meta": {
       "kontaktstelle": "gis@bbl.admin.ch",
       "ausgabedatum": "1. April 2025",
@@ -508,7 +498,6 @@
       "klassifizierung": "Intern",
       "personenbezogen": "Keine",
       "archivwuerdig": "Ja",
-      "schluesselwoerter": ["GIS", "Gebäude", "Polygon", "Geometrie", "Karte"],
       "thema": "Geoinformation",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
       "kommentar": "Ergänzung zu ERP-Stammdaten"
