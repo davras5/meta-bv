@@ -641,30 +641,12 @@
         .responsible-persons-list {
             border-top: 1px solid var(--border-light);
         }
-        .responsible-person-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 0;
-            border-bottom: 1px solid var(--border-light);
-            background: white;
-        }
         .responsible-person-link {
-            font-size: 15px;
             color: var(--link-color);
             text-decoration: underline;
         }
         .responsible-person-link:hover {
             text-decoration: none;
-        }
-        .role-badge {
-            background: white;
-            border: 1px solid #999;
-            padding: 6px 14px;
-            border-radius: var(--radius-pill);
-            font-size: 13px;
-            color: #444;
-            white-space: nowrap;
         }
 
         .section-title { font-size: 24px; font-weight: 400; margin: var(--spacing-xl) 0 25px 0; }
@@ -1454,9 +1436,9 @@
             const html = persons.map(person => {
                 const admindirUrl = `https://admindir.verzeichnisse.admin.ch/person/${person.admindirId}`;
                 return `
-                    <div class="responsible-person-row">
-                        <span>AdminDir ID: <a href="${admindirUrl}" target="_blank" class="responsible-person-link">${person.admindirId}</a></span>
-                        <span class="role-badge">${person.role}</span>
+                    <div class="data-row">
+                        <div class="data-row-key">AdminDir ID: <a href="${admindirUrl}" target="_blank" class="responsible-person-link">${person.admindirId}</a></div>
+                        <div class="data-row-val"><span class="tag-pill">${person.role}</span></div>
                     </div>
                 `;
             }).join('');
