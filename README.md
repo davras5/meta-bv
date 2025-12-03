@@ -44,7 +44,7 @@ meta-bv/
 │
 ├── content/                      # Static content pages
 │   ├── about.html                # About the data catalog
-│   └── handbuch.html             # User manual/handbook
+│   └── manual.html               # User manual/handbook
 │
 ├── data/                         # JSON data files
 │   ├── concepts.json             # 8 business object definitions
@@ -118,7 +118,7 @@ Edit the following files to customize the catalog:
 - `data/concepts.json` - Business object definitions
 - `data/datasets.json` - Dataset definitions
 - `content/about.html` - About page content
-- `content/handbuch.html` - User manual content
+- `content/manual.html` - User manual content
 
 ## Data Structure
 
@@ -178,7 +178,7 @@ The application uses hash-based routing:
 | `#/concept/{id}` | Concept detail page |
 | `#/dataset/{id}` | Dataset detail page |
 | `#/about` | About page |
-| `#/handbuch` | User manual |
+| `#/manual` | User manual |
 
 ### Query Parameters
 

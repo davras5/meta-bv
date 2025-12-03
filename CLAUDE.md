@@ -46,7 +46,7 @@ index.html
 | Business objects | `data/concepts.json` |
 | Dataset definitions | `data/datasets.json` |
 | About page content | `content/about.html` |
-| User manual | `content/handbuch.html` |
+| User manual | `content/manual.html` |
 | Concept images | `images/concepts/` |
 | Dataset images | `images/datasets/` |
 

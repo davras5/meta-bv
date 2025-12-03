@@ -756,7 +756,7 @@
         }
         .attr-table tbody tr:hover { background-color: var(--bg-hover); }
 
-        /* === 16. CONTENT PAGES (About, Handbuch) === */
+        /* === 16. CONTENT PAGES (About, Manual) === */
         .content-page { padding-bottom: 80px; }
         .content-page h2 { font-size: 28px; font-weight: 700; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md); }
         .content-page h3 { font-size: 24px; font-weight: 700; margin-top: 40px; margin-bottom: var(--spacing-sm); }
@@ -768,7 +768,7 @@
         .content-page a:not(.footer-link) { color: var(--link-color); text-decoration: underline; }
         .content-page a:not(.footer-link):hover { text-decoration: none; }
         
-        .handbuch-img {
+        .manual-img {
             display: block;
             max-width: 100%;
             height: auto;
@@ -1004,7 +1004,7 @@
                 <div class="nav-link active" data-page="concept">Konzepte</div>
                 <div class="nav-link" data-page="dataset">Datensätze</div>
                 <div class="nav-link" data-page="about">über diesen Datenkatalog</div>
-                <div class="nav-link" data-page="handbuch">Handbuch</div>
+                <div class="nav-link" data-page="manual">Handbuch</div>
             </nav>
         </div>
     </header>
@@ -1265,9 +1265,9 @@
                 <div id="about-content"></div>
             </div>
 
-            <div id="view-handbuch" class="hidden content-page">
+            <div id="view-manual" class="hidden content-page">
                 <h1 class="page-title">Handbuch</h1>
-                <div id="handbuch-content"></div>
+                <div id="manual-content"></div>
             </div>
         </main>
     </div>
@@ -1333,12 +1333,12 @@
                 filterPanelOpen: false,
                 view: 'grid'
             },
-            contentLoaded: { about: false, handbuch: false }
+            contentLoaded: { about: false, manual: false }
         };
 
         // === CONFIG ===
         const config = {
-            views: ['view-concept-catalog', 'view-dataset-catalog', 'view-concept-detail', 'view-dataset-detail', 'view-about', 'view-handbuch'],
+            views: ['view-concept-catalog', 'view-dataset-catalog', 'view-concept-detail', 'view-dataset-detail', 'view-about', 'view-manual'],
             typeLabels: {
                 concept: 'Konzept',
                 dataset: 'Datensatz'
@@ -1867,7 +1867,7 @@
                 concept: 'Konzepte', 
                 dataset: 'Datensätze', 
                 about: 'Über diesen Datenkatalog', 
-                handbuch: 'Handbuch' 
+                manual: 'Handbuch'
             };
             
             let html = `<a href="#/concept">Startseite</a> <span>&gt;</span> `;
@@ -1904,11 +1904,11 @@
                 showView('view-about');
                 setActiveTab('about');
                 setBreadcrumbs('about');
-            } else if (type === 'handbuch') {
-                await loadContent('handbuch');
-                showView('view-handbuch');
-                setActiveTab('handbuch');
-                setBreadcrumbs('handbuch');
+            } else if (type === 'manual') {
+                await loadContent('manual');
+                showView('view-manual');
+                setActiveTab('manual');
+                setBreadcrumbs('manual');
             } else if (type === 'dataset') {
                 navigate('dataset');
             } else {
