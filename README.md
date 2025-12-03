@@ -85,9 +85,6 @@ This project is designed as a **minimalist single-file web application** with ze
 | **DCAT v3** | W3C standard for data catalogs |
 | **Dublin Core** | Metadata properties (dct:Standard, dct:conformsTo) |
 | **SKOS** | Simple Knowledge Organization System |
-| **IFC/ISO 16739** | Building Information Model standard |
-| **eBKP-H 2020** | Swiss building classification |
-| **DIN 276** | German building cost classification |
 
 ## Getting Started
 
