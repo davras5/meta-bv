@@ -3,92 +3,256 @@
     "id": "1",
     "title": "Aufzugsanlage",
     "description": "Vertikale Beförderungsanlagen (Aufzüge, Fahrtreppen).",
-    "fullDescription": "Eine Aufzugsanlage ist eine technische Anlage, die dazu dient, Personen oder Lasten in einer Kabine oder auf einer Plattform vertikal oder schräg zwischen zwei oder mehreren Ebenen zu transportieren.",
-    "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80",
+    "fullDescription": "Eine Aufzugsanlage ist eine technische Anlage, die dazu dient, Personen oder Lasten in einer Kabine oder auf einer Plattform vertikal oder schräg zwischen zwei oder mehreren Ebenen zu transportieren. Dazu gehören Personenaufzüge, Lastenaufzüge, Fahrtreppen und Fahrsteige. Die Anlagen müssen gemäss schweizerischen Sicherheitsvorschriften regelmässig gewartet und geprüft werden.",
+    "image": "images/concept/Aufzugsanlage.jpg",
     "topTags": ["Konzept", "BBL"],
     "bottomTags": ["Architektonische Sicht", "Technische Objekte"],
     "meta": {
-      "fachliche_id": "Wert ABC",
+      "fachliche_id": "AUF-01",
       "guid": "1756115623450x131157702840746900",
       "termdat": "https://www.termdat.bk.admin.ch/entry/520737",
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
-      "klassifizierung": "Öffentlich / Intern / Vertraulich",
-      "personenbezogen": "Ja / Nein",
-      "kommentar": "Freitext für Kommentar",
+      "klassifizierung": "Öffentlich",
+      "personenbezogen": "Nein",
+      "kommentar": "Vertikale Transportanlagen gemäss SIA 370",
       "version": "V 1.0"
     },
     "standards": [
-        { "name": "ISO 16739 (IFC)", "value": "Wert ABC" },
-        { "name": "eBKP-H", "value": "Wert ABC" },
-        { "name": "DIN 276", "value": "Wert ABC" }
+      { "name": "ISO 16739 (IFC)", "value": "IfcTransportElement" },
+      { "name": "eBKP-H", "value": "D8.1" },
+      { "name": "DIN 276", "value": "461" }
     ],
     "attributes": [
-      { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Beschreibung ABC" },
-      { "name": "Relation ABC", "format": "Text", "key": "FK", "list": "-", "desc": "Beschreibung ABC" },
-      { "name": "Merkmal ABC", "format": "Dezimalzahl", "key": "-", "list": "-", "desc": "Beschreibung ABC" },
-      { "name": "Merkmal ABC", "format": "Währung", "key": "-", "list": "-", "desc": "Beschreibung ABC" },
-      { "name": "Merkmal ABC", "format": "Text", "key": "-", "list": "Werteliste ABC", "desc": "Beschreibung ABC" }
+      { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation der Aufzugsanlage" },
+      { "name": "Gebäude_ID", "format": "Text", "key": "FK", "list": "-", "desc": "Referenz zum zugehörigen Gebäude" },
+      { "name": "Tragfähigkeit", "format": "Dezimalzahl", "key": "-", "list": "-", "desc": "Maximale Tragfähigkeit in kg" },
+      { "name": "Personenkapazität", "format": "Ganzzahl", "key": "-", "list": "-", "desc": "Maximale Personenzahl" },
+      { "name": "Anlagentyp", "format": "Text", "key": "-", "list": "Aufzugstypen", "desc": "Art der Anlage (Personenaufzug, Lastenaufzug, etc.)" }
     ]
   },
   {
     "id": "2",
     "title": "Grundstück",
-    "description": "Räumlich abgrenzbare Bodeneinheit mit eigenständigen Eigentumsrechten gemäss ZGB...",
-    "fullDescription": "Detaillierte Beschreibung für Grundstück...",
-    "image": "https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=800&q=80",
+    "description": "Räumlich abgrenzbare Bodeneinheit mit eigenständigen Eigentumsrechten gemäss ZGB Art. 655. Kann bebaut oder unbebaut sein.",
+    "fullDescription": "Ein Grundstück ist eine räumlich abgegrenzte Bodeneinheit, die im Grundbuch als selbständiges Objekt eingetragen ist. Es bildet die rechtliche Grundlage für Eigentum an Grund und Boden gemäss dem Schweizerischen Zivilgesetzbuch (ZGB Art. 655). Grundstücke können bebaut oder unbebaut sein und umfassen alle darauf errichteten Bauten sowie die damit verbundenen Rechte und Lasten.",
+    "image": "images/concept/Grundstück.jpg",
     "topTags": ["Konzept", "BBL"],
     "bottomTags": ["Architektonische Sicht", "Räumliche Struktur"],
-    "meta": { "fachliche_id": "LND-01" },
-    "standards": [],
-    "attributes": []
+    "meta": {
+      "fachliche_id": "GRU-01",
+      "guid": "1756115623450x131157702840746901",
+      "termdat": "https://www.termdat.bk.admin.ch/entry/123456",
+      "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
+      "system": "ERP SAP RE-FX",
+      "klassifizierung": "Öffentlich",
+      "personenbezogen": "Nein",
+      "kommentar": "Grundstücksdefinition gemäss ZGB",
+      "version": "V 1.0"
+    },
+    "standards": [
+      { "name": "ISO 16739 (IFC)", "value": "IfcSite" },
+      { "name": "eBKP-H", "value": "A" },
+      { "name": "DIN 276", "value": "100" }
+    ],
+    "attributes": [
+      { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation des Grundstücks" },
+      { "name": "Parzellennummer", "format": "Text", "key": "-", "list": "-", "desc": "Offizielle Parzellennummer gemäss Kataster" },
+      { "name": "Fläche", "format": "Dezimalzahl", "key": "-", "list": "-", "desc": "Grundstücksfläche in m²" },
+      { "name": "Eigentümer", "format": "Text", "key": "FK", "list": "-", "desc": "Referenz zum Eigentümer" },
+      { "name": "Nutzungszone", "format": "Text", "key": "-", "list": "Nutzungszonen", "desc": "Baurechtliche Nutzungszone" }
+    ]
   },
   {
     "id": "3",
-    "title": "Bodenbedeckung",
-    "description": "Versiegelte und unversiegelte Flächen gemäss amtlicher Vermessung. Umfasst Gebäude...",
-    "fullDescription": "Detaillierte Beschreibung...",
-    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+    "title": "Bodenabdeckung",
+    "description": "Versiegelte und unversiegelte Flächen gemäss amtlicher Vermessung. Umfasst Gebäude, befestigte Flächen, Grünflächen etc.",
+    "fullDescription": "Die Bodenabdeckung beschreibt die Art der Oberflächenbedeckung eines Grundstücks gemäss der amtlichen Vermessung. Sie unterscheidet zwischen versiegelten Flächen (Gebäude, Strassen, Plätze) und unversiegelten Flächen (Grünflächen, Gewässer, landwirtschaftliche Nutzflächen). Diese Klassifikation ist wichtig für die Berechnung von Entwässerungsgebühren und ökologische Bewertungen.",
+    "image": "images/concept/Bodenabdeckung.jpg",
     "topTags": ["Konzept", "BBL"],
     "bottomTags": ["Architektonische Sicht", "Räumliche Struktur"],
-    "meta": { "fachliche_id": "COV-01" },
-    "standards": [],
-    "attributes": []
+    "meta": {
+      "fachliche_id": "BOD-01",
+      "guid": "1756115623450x131157702840746902",
+      "termdat": "https://www.termdat.bk.admin.ch/entry/234567",
+      "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
+      "system": "ERP SAP RE-FX",
+      "klassifizierung": "Öffentlich",
+      "personenbezogen": "Nein",
+      "kommentar": "Klassifikation gemäss amtlicher Vermessung",
+      "version": "V 1.0"
+    },
+    "standards": [
+      { "name": "ISO 16739 (IFC)", "value": "IfcGeographicElement" },
+      { "name": "eBKP-H", "value": "B" },
+      { "name": "DIN 276", "value": "200" }
+    ],
+    "attributes": [
+      { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation der Bodenabdeckung" },
+      { "name": "Grundstück_ID", "format": "Text", "key": "FK", "list": "-", "desc": "Referenz zum zugehörigen Grundstück" },
+      { "name": "Fläche", "format": "Dezimalzahl", "key": "-", "list": "-", "desc": "Fläche in m²" },
+      { "name": "Versiegelungsgrad", "format": "Dezimalzahl", "key": "-", "list": "-", "desc": "Anteil versiegelter Fläche in %" },
+      { "name": "Bedeckungsart", "format": "Text", "key": "-", "list": "Bedeckungsarten", "desc": "Art der Bodenbedeckung" }
+    ]
   },
   {
     "id": "4",
     "title": "Beleuchtungsanlage",
     "description": "Beleuchtungssysteme inkl. Steuerung und Notbeleuchtung.",
-    "fullDescription": "Detaillierte Beschreibung...",
-    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+    "fullDescription": "Eine Beleuchtungsanlage umfasst alle technischen Einrichtungen zur künstlichen Beleuchtung von Innen- und Aussenräumen. Dazu gehören die Leuchtmittel, Leuchten, Verkabelung, Steuerungssysteme sowie Notbeleuchtungsanlagen. Die Planung erfolgt gemäss SIA 387/4 und berücksichtigt Aspekte wie Energieeffizienz, Lichtqualität und Sicherheitsanforderungen.",
+    "image": "images/concept/Beleuchtungsanlage.jpg",
     "topTags": ["Konzept", "BBL"],
-    "bottomTags": ["Technische Objekte"],
-    "meta": { "fachliche_id": "LGT-01" },
-    "standards": [],
-    "attributes": []
+    "bottomTags": ["Architektonische Sicht", "Technische Objekte"],
+    "meta": {
+      "fachliche_id": "BEL-01",
+      "guid": "1756115623450x131157702840746903",
+      "termdat": "https://www.termdat.bk.admin.ch/entry/345678",
+      "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
+      "system": "ERP SAP RE-FX",
+      "klassifizierung": "Öffentlich",
+      "personenbezogen": "Nein",
+      "kommentar": "Beleuchtungsplanung gemäss SIA 387/4",
+      "version": "V 1.0"
+    },
+    "standards": [
+      { "name": "ISO 16739 (IFC)", "value": "IfcLightFixture" },
+      { "name": "eBKP-H", "value": "D5.3" },
+      { "name": "DIN 276", "value": "445" }
+    ],
+    "attributes": [
+      { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation der Beleuchtungsanlage" },
+      { "name": "Raum_ID", "format": "Text", "key": "FK", "list": "-", "desc": "Referenz zum zugehörigen Raum" },
+      { "name": "Leistung", "format": "Dezimalzahl", "key": "-", "list": "-", "desc": "Installierte Leistung in Watt" },
+      { "name": "Beleuchtungsstärke", "format": "Dezimalzahl", "key": "-", "list": "-", "desc": "Beleuchtungsstärke in Lux" },
+      { "name": "Steuerungsart", "format": "Text", "key": "-", "list": "Steuerungsarten", "desc": "Art der Lichtsteuerung" }
+    ]
   },
   {
     "id": "5",
     "title": "Gebäude",
     "description": "Mit dem Boden fest verbundenes Bauwerk mit eindeutiger Identifikation gemäss VGWR.",
-    "fullDescription": "Detaillierte Beschreibung...",
-    "image": "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=800&q=80",
+    "fullDescription": "Ein Gebäude ist ein dauerhaft mit dem Boden verbundenes Bauwerk, das einen oder mehrere Räume umschliesst und Menschen, Tieren oder Sachen Schutz bietet. Gemäss der Verordnung über das eidgenössische Gebäude- und Wohnungsregister (VGWR) erhält jedes Gebäude eine eindeutige Identifikationsnummer (EGID). Gebäude bilden die zentrale Struktureinheit im Immobilienmanagement.",
+    "image": "images/concept/Gebäude.jpg",
     "topTags": ["Konzept", "BBL"],
-    "bottomTags": ["Architektonische Sicht"],
-    "meta": { "fachliche_id": "BLD-01" },
-    "standards": [],
-    "attributes": []
+    "bottomTags": ["Architektonische Sicht", "Räumliche Struktur"],
+    "meta": {
+      "fachliche_id": "GEB-01",
+      "guid": "1756115623450x131157702840746904",
+      "termdat": "https://www.termdat.bk.admin.ch/entry/456789",
+      "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
+      "system": "ERP SAP RE-FX",
+      "klassifizierung": "Öffentlich",
+      "personenbezogen": "Nein",
+      "kommentar": "Gebäudedefinition gemäss VGWR",
+      "version": "V 1.0"
+    },
+    "standards": [
+      { "name": "ISO 16739 (IFC)", "value": "IfcBuilding" },
+      { "name": "eBKP-H", "value": "C" },
+      { "name": "DIN 276", "value": "300" }
+    ],
+    "attributes": [
+      { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation des Gebäudes" },
+      { "name": "EGID", "format": "Text", "key": "-", "list": "-", "desc": "Eidgenössischer Gebäudeidentifikator" },
+      { "name": "Grundstück_ID", "format": "Text", "key": "FK", "list": "-", "desc": "Referenz zum zugehörigen Grundstück" },
+      { "name": "Baujahr", "format": "Ganzzahl", "key": "-", "list": "-", "desc": "Jahr der Fertigstellung" },
+      { "name": "Gebäudekategorie", "format": "Text", "key": "-", "list": "Gebäudekategorien", "desc": "Nutzungskategorie gemäss VGWR" }
+    ]
   },
   {
     "id": "6",
     "title": "Geschoss",
     "description": "Horizontale Gliederungsebene innerhalb eines Gebäudes mit eindeutiger Höhenlage.",
-    "fullDescription": "Detaillierte Beschreibung...",
-    "image": "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80",
+    "fullDescription": "Ein Geschoss ist eine horizontale Ebene innerhalb eines Gebäudes, die durch Decken begrenzt wird. Geschosse werden von unten nach oben durchnummeriert, wobei das Erdgeschoss als Referenzebene dient. Untergeschosse, Zwischengeschosse und Dachgeschosse werden entsprechend ihrer Lage klassifiziert. Die Geschossdefinition folgt den Vorgaben der SIA 416.",
+    "image": "images/concept/Geschoss.jpg",
     "topTags": ["Konzept", "BBL"],
-    "bottomTags": ["Räumliche Struktur"],
-    "meta": { "fachliche_id": "FLR-01" },
-    "standards": [],
-    "attributes": []
+    "bottomTags": ["Architektonische Sicht", "Räumliche Struktur"],
+    "meta": {
+      "fachliche_id": "GES-01",
+      "guid": "1756115623450x131157702840746905",
+      "termdat": "https://www.termdat.bk.admin.ch/entry/567890",
+      "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
+      "system": "ERP SAP RE-FX",
+      "klassifizierung": "Öffentlich",
+      "personenbezogen": "Nein",
+      "kommentar": "Geschossdefinition gemäss SIA 416",
+      "version": "V 1.0"
+    },
+    "standards": [
+      { "name": "ISO 16739 (IFC)", "value": "IfcBuildingStorey" },
+      { "name": "eBKP-H", "value": "C1" },
+      { "name": "DIN 276", "value": "350" }
+    ],
+    "attributes": [
+      { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation des Geschosses" },
+      { "name": "Gebäude_ID", "format": "Text", "key": "FK", "list": "-", "desc": "Referenz zum zugehörigen Gebäude" },
+      { "name": "Geschossnummer", "format": "Ganzzahl", "key": "-", "list": "-", "desc": "Nummerierung des Geschosses" },
+      { "name": "Höhenlage", "format": "Dezimalzahl", "key": "-", "list": "-", "desc": "Höhe über Referenzpunkt in m" },
+      { "name": "Geschosstyp", "format": "Text", "key": "-", "list": "Geschosstypen", "desc": "Art des Geschosses (EG, OG, UG, DG)" }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Bauteil",
+    "description": "Physische Bauteile (Wände, Decken, Türen, Fenster).",
+    "fullDescription": "Ein Bauteil ist ein physisches Element eines Gebäudes, das eine bestimmte konstruktive oder funktionale Aufgabe erfüllt. Dazu gehören tragende Elemente wie Wände und Decken, sowie nicht-tragende Elemente wie Türen, Fenster und Fassadenverkleidungen. Bauteile werden nach ihrer Funktion, ihrem Material und ihrer Position im Gebäude klassifiziert und sind zentral für die Gebäudedokumentation und das Facility Management.",
+    "image": "images/concept/Bauteil.jpg",
+    "topTags": ["Konzept", "BBL"],
+    "bottomTags": ["Architektonische Sicht", "Konstruktive Objekte"],
+    "meta": {
+      "fachliche_id": "BAU-01",
+      "guid": "1756115623450x131157702840746906",
+      "termdat": "https://www.termdat.bk.admin.ch/entry/678901",
+      "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
+      "system": "ERP SAP RE-FX",
+      "klassifizierung": "Öffentlich",
+      "personenbezogen": "Nein",
+      "kommentar": "Bauteilklassifikation gemäss SIA",
+      "version": "V 1.0"
+    },
+    "standards": [
+      { "name": "ISO 16739 (IFC)", "value": "IfcBuildingElement" },
+      { "name": "eBKP-H", "value": "C4" },
+      { "name": "DIN 276", "value": "330" }
+    ],
+    "attributes": [
+      { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation des Bauteils" },
+      { "name": "Geschoss_ID", "format": "Text", "key": "FK", "list": "-", "desc": "Referenz zum zugehörigen Geschoss" },
+      { "name": "Bauteiltyp", "format": "Text", "key": "-", "list": "Bauteiltypen", "desc": "Art des Bauteils (Wand, Decke, Tür, etc.)" },
+      { "name": "Material", "format": "Text", "key": "-", "list": "Materialien", "desc": "Hauptmaterial des Bauteils" },
+      { "name": "Tragend", "format": "Text", "key": "-", "list": "Ja/Nein", "desc": "Ist das Bauteil statisch tragend?" }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Bemessung",
+    "description": "Flächen, Volumen, Längen, Stückzahlen nach SIA 416 und anderen Standards.",
+    "fullDescription": "Die Bemessung umfasst alle quantitativen Angaben zu Gebäuden und deren Bestandteilen. Dazu gehören Flächenberechnungen (Geschossfläche, Nutzfläche, Verkehrsfläche), Volumenberechnungen (Gebäudevolumen, Rauminhalt), Längenangaben und Stückzahlen. Die Berechnung erfolgt nach den Vorgaben der SIA 416 und weiterer relevanter Normen. Diese Daten sind essentiell für Kostenberechnungen, Mietflächenermittlung und Gebäudebewertungen.",
+    "image": "images/concept/Bemessung.jpg",
+    "topTags": ["Konzept", "BBL"],
+    "bottomTags": ["Architektonische Sicht", "Messungen/Performance"],
+    "meta": {
+      "fachliche_id": "BEM-01",
+      "guid": "1756115623450x131157702840746907",
+      "termdat": "https://www.termdat.bk.admin.ch/entry/789012",
+      "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
+      "system": "ERP SAP RE-FX",
+      "klassifizierung": "Öffentlich",
+      "personenbezogen": "Nein",
+      "kommentar": "Flächenberechnung gemäss SIA 416",
+      "version": "V 1.0"
+    },
+    "standards": [
+      { "name": "ISO 16739 (IFC)", "value": "IfcQuantitySet" },
+      { "name": "SIA 416", "value": "Flächen und Volumen von Gebäuden" },
+      { "name": "DIN 277", "value": "Grundflächen und Rauminhalte" }
+    ],
+    "attributes": [
+      { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation der Bemessung" },
+      { "name": "Objekt_ID", "format": "Text", "key": "FK", "list": "-", "desc": "Referenz zum bemessenen Objekt" },
+      { "name": "Messtyp", "format": "Text", "key": "-", "list": "Messtypen", "desc": "Art der Messung (Fläche, Volumen, Länge)" },
+      { "name": "Wert", "format": "Dezimalzahl", "key": "-", "list": "-", "desc": "Gemessener Wert" },
+      { "name": "Einheit", "format": "Text", "key": "-", "list": "Einheiten", "desc": "Masseinheit (m², m³, m, Stk)" }
+    ]
   }
 ]
