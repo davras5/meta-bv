@@ -235,11 +235,6 @@ Simply serve the files from any static web server. No special configuration requ
 
 Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
-## Contact
-
-- **Email:** dares@bbl.admin.ch
-- **Repository:** https://github.com/davras5/meta-bv
-
 ---
 
 *This is an unofficial mockup for demonstration purposes.*
