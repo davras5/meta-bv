@@ -570,6 +570,22 @@
             border-color: #3d566b;
         }
 
+        /* Tag Label (nicht anklickbar, nur visuell) */
+        .tag-label {
+            background: white;
+            border: 1px solid #999;
+            padding: var(--spacing-xs) 14px;
+            border-radius: var(--radius-pill);
+            font-size: 14px;
+            color: #444;
+            font-weight: 400;
+            display: inline-block;
+            white-space: nowrap;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            cursor: default;
+            pointer-events: none;
+        }
+
         /* === 11. LIST VIEW === */
         .list-table { width: 100%; border-collapse: collapse; font-size: 15px; }
         .list-table th {
@@ -1223,6 +1239,10 @@
         // === CONFIG ===
         const config = {
             views: ['view-concept-catalog', 'view-dataset-catalog', 'view-concept-detail', 'view-dataset-detail', 'view-about', 'view-handbuch'],
+            typeLabels: {
+                concept: 'Konzept',
+                dataset: 'Datensatz'
+            },
             metaFields: {
                 concept: [
                     { key: 'fachliche_id', label: 'Fachliche ID', type: 'pill' },
@@ -1327,7 +1347,7 @@
         function getAllTags(type) {
             const tags = new Set();
             state.data[type].forEach(item => {
-                [...(item.topTags || []), ...(item.bottomTags || [])].forEach(t => tags.add(t));
+                (item.bottomTags || []).forEach(t => tags.add(t));
             });
             return Array.from(tags).sort((a, b) => a.localeCompare(b, 'de'));
         }
@@ -1373,15 +1393,15 @@
             return items.filter(item => {
                 // Text search
                 const text = searchText.toLowerCase();
-                const matchesText = !text || 
+                const matchesText = !text ||
                     item.title.toLowerCase().includes(text) ||
                     item.description.toLowerCase().includes(text);
-                
-                // Tag filter (AND logic)
-                const itemTags = [...(item.topTags || []), ...(item.bottomTags || [])];
-                const matchesTags = tags.length === 0 || 
+
+                // Tag filter (AND logic) - nur bottomTags
+                const itemTags = item.bottomTags || [];
+                const matchesTags = tags.length === 0 ||
                     tags.every(tag => itemTags.includes(tag));
-                
+
                 return matchesText && matchesTags;
             });
         }
@@ -1515,12 +1535,15 @@
                 return;
             }
 
+            // Typ-Label aus Config (nicht anklickbar)
+            const typeLabel = config.typeLabels[type] || '';
+
             if (isGrid) {
                 gridEl.innerHTML = items.map(item => `
                     <div class="card" data-id="${item.id}">
                         <div class="card-img-wrap">
                             <img src="${item.image}" class="card-img" alt="${item.title}">
-                            <div class="tags-overlay">${createTags(item.topTags || [], tags)}</div>
+                            <div class="tags-overlay"><span class="tag-label">${typeLabel}</span></div>
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">${item.title}</h3>
@@ -1533,16 +1556,13 @@
                     </div>
                 `).join('');
             } else {
-                $('tbody', listEl).innerHTML = items.map(item => {
-                    const allTags = [...(item.topTags || []), ...(item.bottomTags || [])];
-                    return `
-                        <tr data-id="${item.id}">
-                            <td class="col-title">${item.title}</td>
-                            <td class="col-desc">${item.description}</td>
-                            <td class="col-tags">${createTags(allTags, tags)}</td>
-                        </tr>
-                    `;
-                }).join('');
+                $('tbody', listEl).innerHTML = items.map(item => `
+                    <tr data-id="${item.id}">
+                        <td class="col-title">${item.title}</td>
+                        <td class="col-desc">${item.description}</td>
+                        <td class="col-tags"><span class="tag-label">${typeLabel}</span>${createTags(item.bottomTags || [], tags)}</td>
+                    </tr>
+                `).join('');
             }
             
             // Render filter panel
@@ -1562,7 +1582,7 @@
             $(`#detail-${type}-title`).textContent = item.title;
             $(`#detail-${type}-desc`).textContent = item.fullDescription || item.description;
             $(`#detail-${type}-img`).src = item.image || '';
-            $(`#detail-${type}-tags`).innerHTML = createTags([...(item.topTags || []), ...(item.bottomTags || [])]);
+            $(`#detail-${type}-tags`).innerHTML = createTags(item.bottomTags || []);
 
             // Metadata
             const metaHtml = item.meta 
