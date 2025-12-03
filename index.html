@@ -326,10 +326,15 @@
         .filter-panel {
             width: var(--filter-panel-width);
             flex-shrink: 0;
+            overflow: hidden;
+            transition: width 0.25s ease, opacity 0.25s ease, margin-right 0.25s ease;
+            opacity: 1;
         }
-        
+
         .filter-panel.hidden {
-            display: none;
+            width: 0;
+            opacity: 0;
+            margin-right: calc(-1 * var(--spacing-lg));
         }
         
         .catalog-content {
@@ -572,16 +577,15 @@
 
         /* Tag Label (nicht anklickbar, nur visuell) */
         .tag-label {
-            background: white;
-            border: 1px solid #999;
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
             padding: var(--spacing-xs) 14px;
             border-radius: var(--radius-pill);
-            font-size: 14px;
-            color: #444;
-            font-weight: 400;
+            font-size: 13px;
+            color: white;
+            font-weight: 500;
             display: inline-block;
             white-space: nowrap;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
             cursor: default;
             pointer-events: none;
         }
@@ -1245,8 +1249,7 @@
             },
             metaFields: {
                 concept: [
-                    { key: 'fachliche_id', label: 'Fachliche ID', type: 'pill' },
-                    { key: 'guid', label: 'GUID', type: 'text' },
+                    { key: 'fachliche_id', label: 'ID', type: 'pill' },
                     { key: 'termdat', label: 'TERMDAT', type: 'link' },
                     { key: 'fachbereich', label: 'Fachbereich', type: 'text' },
                     { key: 'system', label: 'Führendes System', type: 'text' },
@@ -1560,7 +1563,7 @@
                     <tr data-id="${item.id}">
                         <td class="col-title">${item.title}</td>
                         <td class="col-desc">${item.description}</td>
-                        <td class="col-tags"><span class="tag-label">${typeLabel}</span>${createTags(item.bottomTags || [], tags)}</td>
+                        <td class="col-tags">${createTags(item.bottomTags || [], tags)}</td>
                     </tr>
                 `).join('');
             }

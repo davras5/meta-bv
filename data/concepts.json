@@ -8,7 +8,6 @@
     "bottomTags": ["Architektonische Sicht", "Technische Objekte"],
     "meta": {
       "fachliche_id": "AUF-01",
-      "guid": "1756115623450x131157702840746900",
       "termdat": "https://www.termdat.bk.admin.ch/entry/520737",
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
@@ -39,7 +38,6 @@
     "bottomTags": ["Architektonische Sicht", "Räumliche Struktur"],
     "meta": {
       "fachliche_id": "GRU-01",
-      "guid": "1756115623450x131157702840746901",
       "termdat": "https://www.termdat.bk.admin.ch/entry/123456",
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
@@ -70,7 +68,6 @@
     "bottomTags": ["Architektonische Sicht", "Räumliche Struktur"],
     "meta": {
       "fachliche_id": "BOD-01",
-      "guid": "1756115623450x131157702840746902",
       "termdat": "https://www.termdat.bk.admin.ch/entry/234567",
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
@@ -101,7 +98,6 @@
     "bottomTags": ["Architektonische Sicht", "Technische Objekte"],
     "meta": {
       "fachliche_id": "BEL-01",
-      "guid": "1756115623450x131157702840746903",
       "termdat": "https://www.termdat.bk.admin.ch/entry/345678",
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
@@ -132,7 +128,6 @@
     "bottomTags": ["Architektonische Sicht", "Räumliche Struktur"],
     "meta": {
       "fachliche_id": "GEB-01",
-      "guid": "1756115623450x131157702840746904",
       "termdat": "https://www.termdat.bk.admin.ch/entry/456789",
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
@@ -163,7 +158,6 @@
     "bottomTags": ["Architektonische Sicht", "Räumliche Struktur"],
     "meta": {
       "fachliche_id": "GES-01",
-      "guid": "1756115623450x131157702840746905",
       "termdat": "https://www.termdat.bk.admin.ch/entry/567890",
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
@@ -194,7 +188,6 @@
     "bottomTags": ["Architektonische Sicht", "Konstruktive Objekte"],
     "meta": {
       "fachliche_id": "BAU-01",
-      "guid": "1756115623450x131157702840746906",
       "termdat": "https://www.termdat.bk.admin.ch/entry/678901",
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
@@ -225,7 +218,6 @@
     "bottomTags": ["Architektonische Sicht", "Messungen/Performance"],
     "meta": {
       "fachliche_id": "BEM-01",
-      "guid": "1756115623450x131157702840746907",
       "termdat": "https://www.termdat.bk.admin.ch/entry/789012",
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
