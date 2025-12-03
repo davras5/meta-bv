@@ -4,7 +4,7 @@
     "title": "Gebäude (SAP Liegenschafteninventar)",
     "description": "Dieser Datensatz umfasst die Stammdaten aller Gebäude im Portfolio des Bundes. Er enthält grundlegende Informationen wie Adressen, offizielle Gebäudenummern (EGID), Nutzungstyp, Baujahr, Flächenangaben und Zustandsbewertungen.",
     "fullDescription": "Dieser Datensatz umfasst die Stammdaten aller Gebäude im Portfolio des Bundes. Er enthält grundlegende Informationen wie Adressen, offizielle Gebäudenummern (EGID), Nutzungstyp, Baujahr, Flächenangaben und Zustandsbewertungen. Die Daten dienen als Grundlage für das Bestandsmanagement, die Planung von Instandhaltungsmassnahmen und das strategische Reporting. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
-    "image": "https://images.unsplash.com/photo-1555636222-cae831e670b3?auto=format&fit=crop&w=800&q=80",
+    "image": "images/datasets/Placeholder.jpg",
     "topTags": ["Datensatz", "BBL"],
     "bottomTags": ["Gebäude", "ERP IMMO"],
     "meta": {
@@ -12,13 +12,13 @@
       "ausgabedatum": "10. Mai 2025",
       "aktualisierungsintervall": "Monatlich",
       "status": "Veröffentlicht",
-      "klassifizierung": "Öffentlich / Intern / Vertraulich",
-      "personenbezogen": "Ja / Nein",
-      "archivwuerdig": "Ja / Nein",
-      "schluesselwoerter": ["Schlüsselwort ABC", "Schlüsselwort ABC", "Schlüsselwort ABC"],
+      "klassifizierung": "Intern",
+      "personenbezogen": "Nein",
+      "archivwuerdig": "Ja",
+      "schluesselwoerter": ["Gebäude", "EGID", "Stammdaten", "Liegenschaft"],
       "thema": "Immobilienmanagement",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
-      "kommentar": "Freitext für Kommentar"
+      "kommentar": ""
     },
     "distributions": [
       {
@@ -34,18 +34,6 @@
         "bemerkungen": ""
       },
       {
-        "name": "Gebäude API (SOAP)",
-        "format": "SOAP",
-        "identifikator": "b2c3d4e5-6789-01bc-def0-2345678901bc",
-        "titel": "Gebäude API (SOAP)",
-        "zugriffsUrl": "https://api.bbl.admin.ch/soap/gebaeude",
-        "downloadUrl": "",
-        "status": "Veröffentlicht",
-        "dateiformat": "XML/SOAP",
-        "lizenz": "terms_by",
-        "bemerkungen": "WSDL verfügbar unter /wsdl"
-      },
-      {
         "name": "Gebäude API (REST)",
         "format": "REST",
         "identifikator": "c3d4e5f6-7890-12cd-ef01-3456789012cd",
@@ -56,42 +44,29 @@
         "dateiformat": "JSON",
         "lizenz": "terms_by",
         "bemerkungen": "OpenAPI Spec verfügbar"
-      },
-      {
-        "name": "Gebäude API (GraphQL)",
-        "format": "GRAPHQL",
-        "identifikator": "d4e5f6g7-8901-23de-f012-4567890123de",
-        "titel": "Gebäude API (GraphQL)",
-        "zugriffsUrl": "https://api.bbl.admin.ch/graphql",
-        "downloadUrl": "",
-        "status": "Veröffentlicht",
-        "dateiformat": "GraphQL",
-        "lizenz": "terms_by",
-        "bemerkungen": "Schema introspection enabled"
       }
     ],
     "publications": [
-      { "catalog": "Katalog", "value": "Wert ABC" },
-      { "catalog": "Katalog", "value": "Wert ABC" }
+      { "catalog": "I14Y Interoperabilitätsplattform", "value": "Gebäude Bund" }
     ]
   },
   {
     "id": "2",
     "title": "Grundstücke (SAP Liegenschafteninventar)",
-    "description": "Enthält die Stammdaten aller Grundstücke im Eigentum oder in der Verwaltung des Bundes. Der Datensatz umfasst amtliche Informationen wie Parzellennummern, Katasterdaten, Flächenangaben und Eigentumsverhältnisse.",
-    "fullDescription": "Enthält die Stammdaten aller Grundstücke im Eigentum oder in der Verwaltung des Bundes. Der Datensatz umfasst amtliche Informationen wie Parzellennummern, Katasterdaten, Flächenangaben und Eigentumsverhältnisse. Die Daten sind mit dem eidgenössischen Grundbuch verknüpft und bilden die Basis für das Portfoliomanagement sowie für rechtliche und planerische Entscheidungen.",
-    "image": "https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=800&q=80",
+    "description": "Enthält die Stammdaten aller Grundstücke im Eigentum oder in der Verwaltung des Bundes.",
+    "fullDescription": "Enthält die Stammdaten aller Grundstücke im Eigentum oder in der Verwaltung des Bundes. Der Datensatz umfasst amtliche Informationen wie Parzellennummern, Flächenangaben, Zonenart und Eigentumsverhältnisse. Diese Daten bilden die Grundlage für die rechtliche und administrative Verwaltung des Landbesitzes und die Portfolioentwicklung. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
+    "image": "images/datasets/Placeholder.jpg",
     "topTags": ["Datensatz", "BBL"],
     "bottomTags": ["Grundstück", "ERP IMMO"],
     "meta": {
       "kontaktstelle": "info@bbl.admin.ch",
       "ausgabedatum": "15. April 2025",
-      "aktualisierungsintervall": "Quartalsweise",
+      "aktualisierungsintervall": "Monatlich",
       "status": "Veröffentlicht",
       "klassifizierung": "Intern",
       "personenbezogen": "Nein",
       "archivwuerdig": "Ja",
-      "schluesselwoerter": ["Grundstück", "Parzelle", "Kataster"],
+      "schluesselwoerter": ["Grundstück", "Parzelle", "Kataster", "Eigentum"],
       "thema": "Immobilienmanagement",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
       "kommentar": ""
@@ -123,26 +98,26 @@
       }
     ],
     "publications": [
-      { "catalog": "opendata.swiss", "value": "Grundstücke Bund" }
+      { "catalog": "I14Y Interoperabilitätsplattform", "value": "Grundstücke Bund" }
     ]
   },
   {
     "id": "3",
     "title": "Bauprojekte (SAP Projektcontrolling)",
-    "description": "Führt alle Neu- und Umbauprojekte, die vom Bund verantwortet werden. Der Datensatz enthält Projektinformationen wie Projektnummer, Bezeichnung, Projektphasen, Budget und Zeitplan.",
-    "fullDescription": "Führt alle Neu- und Umbauprojekte, die vom Bund verantwortet werden. Der Datensatz enthält Projektinformationen wie Projektnummer, Bezeichnung, Projektphasen, Budget und Zeitplan. Er dient als zentrale Quelle für das Projektcontrolling, die Ressourcenplanung und das Reporting gegenüber dem Parlament. Die Daten werden wöchentlich aus dem SAP-Projektcontrolling synchronisiert.",
-    "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+    "description": "Führt alle Neu- und Umbauprojekte, die vom Bund verantwortet werden.",
+    "fullDescription": "Führt alle Neu- und Umbauprojekte, die vom Bund verantwortet werden. Der Datensatz beinhaltet dynamische Informationen zu Projektbezeichnung, Standort, Projektart (Neubau, Sanierung), Budget, Zeitplänen (Soll/Ist) und dem aktuellen Projektstatus. Er ist die zentrale Quelle für das Projektcontrolling, die Ressourcenplanung und die strategische Bauplanung. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
+    "image": "images/datasets/Placeholder.jpg",
     "topTags": ["Datensatz", "BBL"],
-    "bottomTags": ["Bauprojekt", "SAP PS"],
+    "bottomTags": ["Bauprojekt", "ERP IMMO"],
     "meta": {
       "kontaktstelle": "projekte@bbl.admin.ch",
       "ausgabedatum": "1. Mai 2025",
-      "aktualisierungsintervall": "Wöchentlich",
+      "aktualisierungsintervall": "Monatlich",
       "status": "Veröffentlicht",
       "klassifizierung": "Intern",
       "personenbezogen": "Nein",
       "archivwuerdig": "Ja",
-      "schluesselwoerter": ["Bauprojekt", "Projektcontrolling", "Budget"],
+      "schluesselwoerter": ["Bauprojekt", "Projektcontrolling", "Budget", "Neubau", "Sanierung"],
       "thema": "Projektmanagement",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
       "kommentar": ""
@@ -178,20 +153,20 @@
   {
     "id": "4",
     "title": "Mietverträge (SAP RE-FX)",
-    "description": "Dieser Datensatz listet alle Miet- und Pachtverträge, bei denen der Bund als Mieter oder Vermieter auftritt. Er umfasst Vertragsdetails wie Laufzeiten, Konditionen und Kündigungsfristen.",
-    "fullDescription": "Dieser Datensatz listet alle Miet- und Pachtverträge, bei denen der Bund als Mieter oder Vermieter auftritt. Er umfasst Vertragsdetails wie Laufzeiten, Konditionen, Kündigungsfristen und Mietflächen. Die Daten unterstützen das Vertragsmanagement, die Kostenplanung und die strategische Flächenoptimierung. Die Synchronisation mit SAP RE-FX erfolgt täglich.",
-    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80",
+    "description": "Dieser Datensatz listet alle Miet- und Pachtverträge, bei denen der Bund als Mieter oder Vermieter auftritt.",
+    "fullDescription": "Dieser Datensatz listet alle Miet- und Pachtverträge, bei denen der Bund als Mieter oder Vermieter auftritt. Erfasst sind Vertragsdetails wie Parteien, Mietobjekt, Laufzeiten, Mietzinse und Zahlungskonditionen. Die Daten sind essenziell für die kaufmännische Vertragsverwaltung, die Finanzbuchhaltung und das Belegungsmanagement. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
+    "image": "images/datasets/Placeholder.jpg",
     "topTags": ["Datensatz", "BBL"],
-    "bottomTags": ["Mietvertrag", "SAP RE-FX"],
+    "bottomTags": ["Mietvertrag", "ERP IMMO"],
     "meta": {
       "kontaktstelle": "vertraege@bbl.admin.ch",
       "ausgabedatum": "20. April 2025",
-      "aktualisierungsintervall": "Täglich",
+      "aktualisierungsintervall": "Monatlich",
       "status": "Veröffentlicht",
       "klassifizierung": "Vertraulich",
       "personenbezogen": "Ja",
       "archivwuerdig": "Ja",
-      "schluesselwoerter": ["Mietvertrag", "Pachtvertrag", "RE-FX"],
+      "schluesselwoerter": ["Mietvertrag", "Pachtvertrag", "RE-FX", "Mietzins"],
       "thema": "Immobilienmanagement",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
       "kommentar": "Enthält personenbezogene Daten zu Vertragspartnern"
@@ -220,130 +195,349 @@
         "dateiformat": "JSON",
         "lizenz": "terms_by",
         "bemerkungen": "Authentifizierung erforderlich"
-      },
-      {
-        "name": "Mietverträge API (SOAP)",
-        "format": "SOAP",
-        "identifikator": "k1l2m3n4-5678-90kl-6789-1234567890kl",
-        "titel": "Mietverträge API (SOAP)",
-        "zugriffsUrl": "https://api.bbl.admin.ch/soap/contracts",
-        "downloadUrl": "",
-        "status": "Veröffentlicht",
-        "dateiformat": "XML/SOAP",
-        "lizenz": "terms_by",
-        "bemerkungen": "Legacy-Schnittstelle für SAP-Integration"
       }
     ],
     "publications": []
   },
   {
     "id": "5",
-    "title": "Energieverbrauch (SIEMENS Desigo CC)",
-    "description": "Erfasst den Energieverbrauch aller Bundesliegenschaften nach Energieträger. Enthält Verbrauchsdaten für Strom, Wärme, Kälte und Wasser auf Gebäude- und Zählerebene.",
-    "fullDescription": "Erfasst den Energieverbrauch aller Bundesliegenschaften nach Energieträger. Enthält Verbrauchsdaten für Strom, Wärme, Kälte und Wasser auf Gebäude- und Zählerebene. Die Daten werden für das Energiemonitoring, die Nachhaltigkeitsberichterstattung und die Erreichung der Klimaziele 2040 verwendet. Die Messdaten werden stündlich aus den Gebäudeleitsystemen übertragen.",
-    "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80",
+    "title": "Gebäudetechnische Anlagen (SAP PM)",
+    "description": "Inventar der technischen Grossanlagen in den Gebäuden des Bundes.",
+    "fullDescription": "Inventar der technischen Grossanlagen in den Gebäuden des Bundes. Der Datensatz umfasst Systeme wie Heizungs-, Lüftungs- und Klimaanlagen (HLK), Aufzüge, Sicherheits- und Elektroanlagen. Enthalten sind Informationen zu Anlagentyp, Standort, Hersteller, Inbetriebnahmedatum und Wartungszyklen. Dient als Grundlage für das Facility Management, die Planung der Instandhaltung und die Sicherstellung des Betriebs. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
+    "image": "images/datasets/Placeholder.jpg",
     "topTags": ["Datensatz", "BBL"],
-    "bottomTags": ["Energie", "Desigo CC"],
+    "bottomTags": ["Tag 1", "Tag 2"],
     "meta": {
-      "kontaktstelle": "energie@bbl.admin.ch",
-      "ausgabedatum": "1. Januar 2025",
-      "aktualisierungsintervall": "Stündlich",
+      "kontaktstelle": "technik@bbl.admin.ch",
+      "ausgabedatum": "1. März 2025",
+      "aktualisierungsintervall": "Monatlich",
       "status": "Veröffentlicht",
       "klassifizierung": "Intern",
       "personenbezogen": "Nein",
       "archivwuerdig": "Ja",
-      "schluesselwoerter": ["Energie", "Verbrauch", "Nachhaltigkeit", "CO2"],
-      "thema": "Nachhaltigkeit",
-      "rechtsgrundlage": "Klimastrategie Bund, Energiegesetz EnG",
-      "kommentar": ""
-    },
-    "distributions": [
-      {
-        "name": "Energiedaten Dashboard Export",
-        "format": "Excel",
-        "identifikator": "l2m3n4o5-6789-01lm-7890-2345678901lm",
-        "titel": "Energiedaten Dashboard Export",
-        "zugriffsUrl": "https://energy.bbl.admin.ch/dashboard/export",
-        "downloadUrl": "https://energy.bbl.admin.ch/download/energiedaten.xlsx",
-        "status": "Veröffentlicht",
-        "dateiformat": "XLSX",
-        "lizenz": "terms_by",
-        "bemerkungen": "Aggregierte Monatswerte"
-      },
-      {
-        "name": "Energie API (REST)",
-        "format": "REST",
-        "identifikator": "m3n4o5p6-7890-12mn-8901-3456789012mn",
-        "titel": "Energie API (REST)",
-        "zugriffsUrl": "https://api.bbl.admin.ch/v1/energy",
-        "downloadUrl": "",
-        "status": "Veröffentlicht",
-        "dateiformat": "JSON",
-        "lizenz": "terms_by",
-        "bemerkungen": "Stündliche Messwerte verfügbar"
-      },
-      {
-        "name": "Energie API (GraphQL)",
-        "format": "GRAPHQL",
-        "identifikator": "n4o5p6q7-8901-23no-9012-4567890123no",
-        "titel": "Energie API (GraphQL)",
-        "zugriffsUrl": "https://api.bbl.admin.ch/graphql",
-        "downloadUrl": "",
-        "status": "Veröffentlicht",
-        "dateiformat": "GraphQL",
-        "lizenz": "terms_by",
-        "bemerkungen": "Flexible Abfragen für Dashboards"
-      }
-    ],
-    "publications": [
-      { "catalog": "opendata.swiss", "value": "Energieverbrauch Bundesgebäude" }
-    ]
-  },
-  {
-    "id": "6",
-    "title": "Flächennutzung (CAFM planon)",
-    "description": "Dokumentiert die Nutzung aller Flächen in Bundesgebäuden nach SIA 416. Enthält Informationen zu Raumtypen, Nutzungsarten, Belegungen und Arbeitsplatzzahlen.",
-    "fullDescription": "Dokumentiert die Nutzung aller Flächen in Bundesgebäuden nach SIA 416. Enthält Informationen zu Raumtypen, Nutzungsarten, Belegungen und Arbeitsplatzzahlen. Die Daten bilden die Grundlage für das Flächenmanagement, die Arbeitsplatzplanung und die Optimierung der Raumnutzung. Die Aktualisierung erfolgt bei jeder Änderung im CAFM-System.",
-    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
-    "topTags": ["Datensatz", "BBL"],
-    "bottomTags": ["Fläche", "CAFM"],
-    "meta": {
-      "kontaktstelle": "flaechen@bbl.admin.ch",
-      "ausgabedatum": "10. März 2025",
-      "aktualisierungsintervall": "Bei Änderung",
-      "status": "Veröffentlicht",
-      "klassifizierung": "Intern",
-      "personenbezogen": "Nein",
-      "archivwuerdig": "Nein",
-      "schluesselwoerter": ["Fläche", "Raum", "SIA 416", "Arbeitsplatz"],
-      "thema": "Flächenmanagement",
+      "schluesselwoerter": ["Anlagen", "HLK", "Aufzug", "Wartung", "Facility Management"],
+      "thema": "Gebäudetechnik",
       "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
       "kommentar": ""
     },
     "distributions": [
       {
-        "name": "Flächendaten planon Export",
+        "name": "Anlagen Export (DE)",
         "format": "Excel",
-        "identifikator": "o5p6q7r8-9012-34op-0123-5678901234op",
-        "titel": "Flächendaten planon Export",
-        "zugriffsUrl": "https://planon.bbl.admin.ch/export/flaechen",
-        "downloadUrl": "https://planon.bbl.admin.ch/download/flaechen.xlsx",
+        "identifikator": "t1u2v3w4-5678-90tu-cdef-1234567890tu",
+        "titel": "Anlagen Export (DE)",
+        "zugriffsUrl": "https://actanova.bbl.admin.ch/documents/anlagen.xlsx",
+        "downloadUrl": "https://actanova.bbl.admin.ch/download/anlagen.xlsx",
         "status": "Veröffentlicht",
         "dateiformat": "XLSX",
         "lizenz": "terms_by",
-        "bemerkungen": "Export aus planon CAFM"
+        "bemerkungen": ""
       },
       {
-        "name": "Flächen API (REST)",
+        "name": "Anlagen API (REST)",
         "format": "REST",
-        "identifikator": "p6q7r8s9-0123-45pq-1234-6789012345pq",
-        "titel": "Flächen API (REST)",
-        "zugriffsUrl": "https://api.bbl.admin.ch/v1/spaces",
+        "identifikator": "u2v3w4x5-6789-01uv-def0-2345678901uv",
+        "titel": "Anlagen API (REST)",
+        "zugriffsUrl": "https://api.bbl.admin.ch/v1/anlagen",
         "downloadUrl": "",
         "status": "Veröffentlicht",
         "dateiformat": "JSON",
         "lizenz": "terms_by",
         "bemerkungen": "OpenAPI Spec verfügbar"
+      }
+    ],
+    "publications": []
+  },
+  {
+    "id": "6",
+    "title": "Projektdaten: Bauprojekte (CDE Bund)",
+    "description": "Stellt die Metadaten der Projekte aus der zentralen Kollaborationsplattform Common Data Environment (CDE) des Bundes bereit.",
+    "fullDescription": "Stellt die Metadaten der Projekte aus der zentralen Kollaborationsplattform Common Data Environment (CDE) des Bundes bereit. Diese Plattform dient dem Austausch von BIM-Modellen, Plänen und technischen Dokumenten während der Planungs- und Ausführungsphase. Der Datensatz enthält Informationen über Projektstruktur, Beteiligte, Dokumentenstatus und Freigabeprozesse und bildet die Grundlage für das digitale Projektmanagement.",
+    "image": "images/datasets/Placeholder.jpg",
+    "topTags": ["Datensatz", "BBL"],
+    "bottomTags": ["Bauprojekt", "CDE Bund"],
+    "meta": {
+      "kontaktstelle": "bim@bbl.admin.ch",
+      "ausgabedatum": "15. Mai 2025",
+      "aktualisierungsintervall": "Bei Änderung",
+      "status": "Veröffentlicht",
+      "klassifizierung": "Intern",
+      "personenbezogen": "Nein",
+      "archivwuerdig": "Ja",
+      "schluesselwoerter": ["BIM", "CDE", "Kollaboration", "Dokumente", "Freigabe"],
+      "thema": "Projektmanagement",
+      "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
+      "kommentar": ""
+    },
+    "distributions": [
+      {
+        "name": "CDE Projektdaten Export",
+        "format": "Excel",
+        "identifikator": "v3w4x5y6-7890-12vw-ef01-3456789012vw",
+        "titel": "CDE Projektdaten Export",
+        "zugriffsUrl": "https://cde.bbl.admin.ch/export/projekte",
+        "downloadUrl": "https://cde.bbl.admin.ch/download/projekte.xlsx",
+        "status": "Veröffentlicht",
+        "dateiformat": "XLSX",
+        "lizenz": "terms_by",
+        "bemerkungen": ""
+      },
+      {
+        "name": "CDE API (REST)",
+        "format": "REST",
+        "identifikator": "w4x5y6z7-8901-23wx-f012-4567890123wx",
+        "titel": "CDE API (REST)",
+        "zugriffsUrl": "https://api.bbl.admin.ch/v1/cde/projects",
+        "downloadUrl": "",
+        "status": "Veröffentlicht",
+        "dateiformat": "JSON",
+        "lizenz": "terms_by",
+        "bemerkungen": "OpenAPI Spec verfügbar"
+      }
+    ],
+    "publications": []
+  },
+  {
+    "id": "7",
+    "title": "Geodaten: Bauprojekte (GIS IMMO)",
+    "description": "Dieser Datensatz visualisiert Bauprojekte als Geometrien im Geo-Informationssystem.",
+    "fullDescription": "Dieser Datensatz visualisiert Bauprojekte als Geometrien im Geo-Informationssystem. Erfasst wird der Projektperimeter, also der räumliche Geltungsbereich eines Bauvorhabens. Die Daten ermöglichen die kartografische Darstellung von aktuellen und geplanten Baustellen, die Analyse der räumlichen Auswirkungen und die Koordination mit anderen Infrastrukturprojekten. Es ist die geografische Sicht auf die Projektdaten aus dem ERP.",
+    "image": "images/datasets/Placeholder.jpg",
+    "topTags": ["Datensatz", "BBL"],
+    "bottomTags": ["Bauprojekt", "GIS IMMO"],
+    "meta": {
+      "kontaktstelle": "gis@bbl.admin.ch",
+      "ausgabedatum": "1. April 2025",
+      "aktualisierungsintervall": "Wöchentlich",
+      "status": "Veröffentlicht",
+      "klassifizierung": "Intern",
+      "personenbezogen": "Nein",
+      "archivwuerdig": "Ja",
+      "schluesselwoerter": ["GIS", "Geodaten", "Bauprojekt", "Perimeter", "Karte"],
+      "thema": "Geoinformation",
+      "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
+      "kommentar": ""
+    },
+    "distributions": [
+      {
+        "name": "GIS Bauprojekte Export",
+        "format": "GeoJSON",
+        "identifikator": "x5y6z7a8-9012-34xy-0123-5678901234xy",
+        "titel": "GIS Bauprojekte Export",
+        "zugriffsUrl": "https://gis.bbl.admin.ch/export/bauprojekte",
+        "downloadUrl": "https://gis.bbl.admin.ch/download/bauprojekte.geojson",
+        "status": "Veröffentlicht",
+        "dateiformat": "GeoJSON",
+        "lizenz": "terms_by",
+        "bemerkungen": ""
+      },
+      {
+        "name": "GIS Bauprojekte WFS",
+        "format": "WFS",
+        "identifikator": "y6z7a8b9-0123-45yz-1234-6789012345yz",
+        "titel": "GIS Bauprojekte WFS",
+        "zugriffsUrl": "https://gis.bbl.admin.ch/wfs/bauprojekte",
+        "downloadUrl": "",
+        "status": "Veröffentlicht",
+        "dateiformat": "WFS",
+        "lizenz": "terms_by",
+        "bemerkungen": "OGC-konformer Web Feature Service"
+      }
+    ],
+    "publications": []
+  },
+  {
+    "id": "8",
+    "title": "Geodaten: Bodenabdeckung (GIS IMMO)",
+    "description": "Dieser Datensatz analysiert die Flächenanteile der Bodenbedeckung auf den Grundstücken des Bundes.",
+    "fullDescription": "Dieser Datensatz analysiert die Flächenanteile der Bodenbedeckung auf den Grundstücken des Bundes. Er wird durch eine räumliche Verschneidung der eigenen Grundstücks-Geometrien mit den Daten der Amtlichen Vermessung (AV) der Schweiz generiert. Das Resultat sind exakte Bemessungen für verschiedene Nutzungsarten wie Gebäudegrundflächen, versiegelte Flächen (z.B. Parkplätze), Grünflächen und offene Flächen. Die Daten sind eine wichtige Grundlage für Umwelt-Reportings, die Berechnung von Nachhaltigkeitskennzahlen (z.B. Versiegelungsgrad) und die operative Liegenschaftsverwaltung.",
+    "image": "images/datasets/Placeholder.jpg",
+    "topTags": ["Datensatz", "BBL"],
+    "bottomTags": ["Bodenabdeckung", "GIS IMMO"],
+    "meta": {
+      "kontaktstelle": "gis@bbl.admin.ch",
+      "ausgabedatum": "1. April 2025",
+      "aktualisierungsintervall": "Quartalsweise",
+      "status": "Veröffentlicht",
+      "klassifizierung": "Intern",
+      "personenbezogen": "Nein",
+      "archivwuerdig": "Ja",
+      "schluesselwoerter": ["GIS", "Bodenabdeckung", "Versiegelung", "Grünfläche", "Nachhaltigkeit"],
+      "thema": "Geoinformation",
+      "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
+      "kommentar": "Verschneidung mit Amtlicher Vermessung"
+    },
+    "distributions": [
+      {
+        "name": "GIS Bodenabdeckung Export",
+        "format": "GeoJSON",
+        "identifikator": "z7a8b9c0-1234-56za-2345-7890123456za",
+        "titel": "GIS Bodenabdeckung Export",
+        "zugriffsUrl": "https://gis.bbl.admin.ch/export/bodenabdeckung",
+        "downloadUrl": "https://gis.bbl.admin.ch/download/bodenabdeckung.geojson",
+        "status": "Veröffentlicht",
+        "dateiformat": "GeoJSON",
+        "lizenz": "terms_by",
+        "bemerkungen": ""
+      },
+      {
+        "name": "GIS Bodenabdeckung WFS",
+        "format": "WFS",
+        "identifikator": "a8b9c0d1-2345-67ab-3456-8901234567ab",
+        "titel": "GIS Bodenabdeckung WFS",
+        "zugriffsUrl": "https://gis.bbl.admin.ch/wfs/bodenabdeckung",
+        "downloadUrl": "",
+        "status": "Veröffentlicht",
+        "dateiformat": "WFS",
+        "lizenz": "terms_by",
+        "bemerkungen": "OGC-konformer Web Feature Service"
+      }
+    ],
+    "publications": []
+  },
+  {
+    "id": "9",
+    "title": "Bauwerksdokumentation (Planarchiv DALA)",
+    "description": "Dieser Datensatz ist ein Metadaten-Auszug aus dem digitalen Planarchiv \"DALA\".",
+    "fullDescription": "Dieser Datensatz ist ein Metadaten-Auszug aus dem digitalen Planarchiv \"DALA\". Er enthält beschreibende Informationen zu archivierten Bauwerksdokumenten wie Grundrissen, Schnitten, Ansichten und technischen Schemata. Erfasst sind Attribute wie Dokumententyp, zugehöriges Gebäude/Bauprojekt, Erstellungsdatum und Planverfasser. Der Datensatz dient der Recherche und Identifikation von Plänen; er enthält nicht die Dokumente selbst, sondern den Verweis darauf.",
+    "image": "images/datasets/Placeholder.jpg",
+    "topTags": ["Datensatz", "BBL"],
+    "bottomTags": ["Dokument", "Planarchiv DALA"],
+    "meta": {
+      "kontaktstelle": "archiv@bbl.admin.ch",
+      "ausgabedatum": "1. Februar 2025",
+      "aktualisierungsintervall": "Bei Änderung",
+      "status": "Veröffentlicht",
+      "klassifizierung": "Intern",
+      "personenbezogen": "Nein",
+      "archivwuerdig": "Ja",
+      "schluesselwoerter": ["Planarchiv", "Dokumente", "Grundrisse", "Schnitte", "DALA"],
+      "thema": "Dokumentation",
+      "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
+      "kommentar": "Metadaten-Index, keine Originaldokumente"
+    },
+    "distributions": [
+      {
+        "name": "DALA Metadaten Export",
+        "format": "Excel",
+        "identifikator": "b9c0d1e2-3456-78bc-4567-9012345678bc",
+        "titel": "DALA Metadaten Export",
+        "zugriffsUrl": "https://dala.bbl.admin.ch/export/metadaten",
+        "downloadUrl": "https://dala.bbl.admin.ch/download/metadaten.xlsx",
+        "status": "Veröffentlicht",
+        "dateiformat": "XLSX",
+        "lizenz": "terms_by",
+        "bemerkungen": ""
+      },
+      {
+        "name": "DALA API (REST)",
+        "format": "REST",
+        "identifikator": "c0d1e2f3-4567-89cd-5678-0123456789cd",
+        "titel": "DALA API (REST)",
+        "zugriffsUrl": "https://api.bbl.admin.ch/v1/dala",
+        "downloadUrl": "",
+        "status": "Veröffentlicht",
+        "dateiformat": "JSON",
+        "lizenz": "terms_by",
+        "bemerkungen": "OpenAPI Spec verfügbar"
+      }
+    ],
+    "publications": []
+  },
+  {
+    "id": "10",
+    "title": "Geodaten: Grundstücke (GIS IMMO)",
+    "description": "Stellt die Geometrien und geografischen Lagedaten aller Grundstücke im Besitz des Bundes zur Verfügung.",
+    "fullDescription": "Stellt die Geometrien und geografischen Lagedaten aller Grundstücke im Besitz des Bundes zur Verfügung. Der Datensatz aus dem GIS beinhaltet die exakten Parzellengrenzen und ist mit den Daten der amtlichen Vermessung verknüpft. Er wird für die visuelle Darstellung des Landbesitzes, für die strategische Arealentwicklung und für räumliche Analysen genutzt.",
+    "image": "images/datasets/Placeholder.jpg",
+    "topTags": ["Datensatz", "BBL"],
+    "bottomTags": ["Grundstück", "GIS IMMO"],
+    "meta": {
+      "kontaktstelle": "gis@bbl.admin.ch",
+      "ausgabedatum": "1. April 2025",
+      "aktualisierungsintervall": "Quartalsweise",
+      "status": "Veröffentlicht",
+      "klassifizierung": "Intern",
+      "personenbezogen": "Nein",
+      "archivwuerdig": "Ja",
+      "schluesselwoerter": ["GIS", "Grundstück", "Parzelle", "Geometrie", "Karte"],
+      "thema": "Geoinformation",
+      "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
+      "kommentar": "Verknüpft mit Amtlicher Vermessung"
+    },
+    "distributions": [
+      {
+        "name": "GIS Grundstücke Export",
+        "format": "GeoJSON",
+        "identifikator": "d1e2f3g4-5678-90de-6789-1234567890de",
+        "titel": "GIS Grundstücke Export",
+        "zugriffsUrl": "https://gis.bbl.admin.ch/export/grundstuecke",
+        "downloadUrl": "https://gis.bbl.admin.ch/download/grundstuecke.geojson",
+        "status": "Veröffentlicht",
+        "dateiformat": "GeoJSON",
+        "lizenz": "terms_by",
+        "bemerkungen": ""
+      },
+      {
+        "name": "GIS Grundstücke WFS",
+        "format": "WFS",
+        "identifikator": "e2f3g4h5-6789-01ef-7890-2345678901ef",
+        "titel": "GIS Grundstücke WFS",
+        "zugriffsUrl": "https://gis.bbl.admin.ch/wfs/grundstuecke",
+        "downloadUrl": "",
+        "status": "Veröffentlicht",
+        "dateiformat": "WFS",
+        "lizenz": "terms_by",
+        "bemerkungen": "OGC-konformer Web Feature Service"
+      }
+    ],
+    "publications": []
+  },
+  {
+    "id": "11",
+    "title": "Geodaten: Gebäude (GIS IMMO)",
+    "description": "Dieser Datensatz enthält die Geodaten aller Gebäude im Portfolio des Bundes aus dem Geo-Informationssystem (GIS IMMO).",
+    "fullDescription": "Dieser Datensatz enthält die Geodaten aller Gebäude im Portfolio des Bundes aus dem Geo-Informationssystem (GIS IMMO). Er umfasst die exakten Standorte und geometrischen Umrisse (Gebäudepolygone) der Bauten. Die Daten dienen als Grundlage für räumliche Analysen, kartografische Darstellungen und die Standortplanung. Es ist die geografische Ergänzung zu den alphanumerischen Stammdaten der Gebäude aus dem ERP.",
+    "image": "images/datasets/Placeholder.jpg",
+    "topTags": ["Datensatz", "BBL"],
+    "bottomTags": ["Gebäude", "GIS IMMO"],
+    "meta": {
+      "kontaktstelle": "gis@bbl.admin.ch",
+      "ausgabedatum": "1. April 2025",
+      "aktualisierungsintervall": "Monatlich",
+      "status": "Veröffentlicht",
+      "klassifizierung": "Intern",
+      "personenbezogen": "Nein",
+      "archivwuerdig": "Ja",
+      "schluesselwoerter": ["GIS", "Gebäude", "Polygon", "Geometrie", "Karte"],
+      "thema": "Geoinformation",
+      "rechtsgrundlage": "Verordnung über das Immobilienmanagement und die Logistik des Bundes VILB",
+      "kommentar": "Ergänzung zu ERP-Stammdaten"
+    },
+    "distributions": [
+      {
+        "name": "GIS Gebäude Export",
+        "format": "GeoJSON",
+        "identifikator": "f3g4h5i6-7890-12fg-8901-3456789012fg",
+        "titel": "GIS Gebäude Export",
+        "zugriffsUrl": "https://gis.bbl.admin.ch/export/gebaeude",
+        "downloadUrl": "https://gis.bbl.admin.ch/download/gebaeude.geojson",
+        "status": "Veröffentlicht",
+        "dateiformat": "GeoJSON",
+        "lizenz": "terms_by",
+        "bemerkungen": ""
+      },
+      {
+        "name": "GIS Gebäude WFS",
+        "format": "WFS",
+        "identifikator": "g4h5i6j7-8901-23gh-9012-4567890123gh",
+        "titel": "GIS Gebäude WFS",
+        "zugriffsUrl": "https://gis.bbl.admin.ch/wfs/gebaeude",
+        "downloadUrl": "",
+        "status": "Veröffentlicht",
+        "dateiformat": "WFS",
+        "lizenz": "terms_by",
+        "bemerkungen": "OGC-konformer Web Feature Service"
       }
     ],
     "publications": []
