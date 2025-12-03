@@ -4,7 +4,7 @@
     "title": "Aufzugsanlage",
     "description": "Vertikale Beförderungsanlagen (Aufzüge, Fahrtreppen).",
     "fullDescription": "Eine Aufzugsanlage ist eine technische Anlage, die dazu dient, Personen oder Lasten in einer Kabine oder auf einer Plattform vertikal oder schräg zwischen zwei oder mehreren Ebenen zu transportieren. Dazu gehören Personenaufzüge, Lastenaufzüge, Fahrtreppen und Fahrsteige. Die Anlagen müssen gemäss schweizerischen Sicherheitsvorschriften regelmässig gewartet und geprüft werden.",
-    "image": "images/concept/Aufzugsanlage.jpg",
+    "image": "images/concepts/Aufzugsanlage.jpg",
     "topTags": ["Konzept", "BBL"],
     "bottomTags": ["Architektonische Sicht", "Technische Objekte"],
     "meta": {
@@ -36,7 +36,7 @@
     "title": "Grundstück",
     "description": "Räumlich abgrenzbare Bodeneinheit mit eigenständigen Eigentumsrechten gemäss ZGB Art. 655. Kann bebaut oder unbebaut sein.",
     "fullDescription": "Ein Grundstück ist eine räumlich abgegrenzte Bodeneinheit, die im Grundbuch als selbständiges Objekt eingetragen ist. Es bildet die rechtliche Grundlage für Eigentum an Grund und Boden gemäss dem Schweizerischen Zivilgesetzbuch (ZGB Art. 655). Grundstücke können bebaut oder unbebaut sein und umfassen alle darauf errichteten Bauten sowie die damit verbundenen Rechte und Lasten.",
-    "image": "images/concept/Grundstück.jpg",
+    "image": "images/concepts/Grundstück.jpg",
     "topTags": ["Konzept", "BBL"],
     "bottomTags": ["Architektonische Sicht", "Räumliche Struktur"],
     "meta": {
@@ -68,7 +68,7 @@
     "title": "Bodenabdeckung",
     "description": "Versiegelte und unversiegelte Flächen gemäss amtlicher Vermessung. Umfasst Gebäude, befestigte Flächen, Grünflächen etc.",
     "fullDescription": "Die Bodenabdeckung beschreibt die Art der Oberflächenbedeckung eines Grundstücks gemäss der amtlichen Vermessung. Sie unterscheidet zwischen versiegelten Flächen (Gebäude, Strassen, Plätze) und unversiegelten Flächen (Grünflächen, Gewässer, landwirtschaftliche Nutzflächen). Diese Klassifikation ist wichtig für die Berechnung von Entwässerungsgebühren und ökologische Bewertungen.",
-    "image": "images/concept/Bodenabdeckung.jpg",
+    "image": "images/concepts/Bodenabdeckung.jpg",
     "topTags": ["Konzept", "BBL"],
     "bottomTags": ["Architektonische Sicht", "Räumliche Struktur"],
     "meta": {
@@ -100,7 +100,7 @@
     "title": "Beleuchtungsanlage",
     "description": "Beleuchtungssysteme inkl. Steuerung und Notbeleuchtung.",
     "fullDescription": "Eine Beleuchtungsanlage umfasst alle technischen Einrichtungen zur künstlichen Beleuchtung von Innen- und Aussenräumen. Dazu gehören die Leuchtmittel, Leuchten, Verkabelung, Steuerungssysteme sowie Notbeleuchtungsanlagen. Die Planung erfolgt gemäss SIA 387/4 und berücksichtigt Aspekte wie Energieeffizienz, Lichtqualität und Sicherheitsanforderungen.",
-    "image": "images/concept/Beleuchtungsanlage.jpg",
+    "image": "images/concepts/Beleuchtungsanlage.jpg",
     "topTags": ["Konzept", "BBL"],
     "bottomTags": ["Architektonische Sicht", "Technische Objekte"],
     "meta": {
@@ -132,7 +132,7 @@
     "title": "Gebäude",
     "description": "Mit dem Boden fest verbundenes Bauwerk mit eindeutiger Identifikation gemäss VGWR.",
     "fullDescription": "Ein Gebäude ist ein dauerhaft mit dem Boden verbundenes Bauwerk, das einen oder mehrere Räume umschliesst und Menschen, Tieren oder Sachen Schutz bietet. Gemäss der Verordnung über das eidgenössische Gebäude- und Wohnungsregister (VGWR) erhält jedes Gebäude eine eindeutige Identifikationsnummer (EGID). Gebäude bilden die zentrale Struktureinheit im Immobilienmanagement.",
-    "image": "images/concept/Gebäude.jpg",
+    "image": "images/concepts/Gebäude.jpg",
     "topTags": ["Konzept", "BBL"],
     "bottomTags": ["Architektonische Sicht", "Räumliche Struktur"],
     "meta": {
@@ -164,7 +164,7 @@
     "title": "Geschoss",
     "description": "Horizontale Gliederungsebene innerhalb eines Gebäudes mit eindeutiger Höhenlage.",
     "fullDescription": "Ein Geschoss ist eine horizontale Ebene innerhalb eines Gebäudes, die durch Decken begrenzt wird. Geschosse werden von unten nach oben durchnummeriert, wobei das Erdgeschoss als Referenzebene dient. Untergeschosse, Zwischengeschosse und Dachgeschosse werden entsprechend ihrer Lage klassifiziert. Die Geschossdefinition folgt den Vorgaben der SIA 416.",
-    "image": "images/concept/Geschoss.jpg",
+    "image": "images/concepts/Geschoss.jpg",
     "topTags": ["Konzept", "BBL"],
     "bottomTags": ["Architektonische Sicht", "Räumliche Struktur"],
     "meta": {
@@ -196,7 +196,7 @@
     "title": "Bauteil",
     "description": "Physische Bauteile (Wände, Decken, Türen, Fenster).",
     "fullDescription": "Ein Bauteil ist ein physisches Element eines Gebäudes, das eine bestimmte konstruktive oder funktionale Aufgabe erfüllt. Dazu gehören tragende Elemente wie Wände und Decken, sowie nicht-tragende Elemente wie Türen, Fenster und Fassadenverkleidungen. Bauteile werden nach ihrer Funktion, ihrem Material und ihrer Position im Gebäude klassifiziert und sind zentral für die Gebäudedokumentation und das Facility Management.",
-    "image": "images/concept/Bauteil.jpg",
+    "image": "images/concepts/Bauteil.jpg",
     "topTags": ["Konzept", "BBL"],
     "bottomTags": ["Architektonische Sicht", "Konstruktive Objekte"],
     "meta": {
@@ -228,7 +228,7 @@
     "title": "Bemessung",
     "description": "Flächen, Volumen, Längen, Stückzahlen nach SIA 416 und anderen Standards.",
     "fullDescription": "Die Bemessung umfasst alle quantitativen Angaben zu Gebäuden und deren Bestandteilen. Dazu gehören Flächenberechnungen (Geschossfläche, Nutzfläche, Verkehrsfläche), Volumenberechnungen (Gebäudevolumen, Rauminhalt), Längenangaben und Stückzahlen. Die Berechnung erfolgt nach den Vorgaben der SIA 416 und weiterer relevanter Normen. Diese Daten sind essentiell für Kostenberechnungen, Mietflächenermittlung und Gebäudebewertungen.",
-    "image": "images/concept/Bemessung.jpg",
+    "image": "images/concepts/Bemessung.jpg",
     "topTags": ["Konzept", "BBL"],
     "bottomTags": ["Architektonische Sicht", "Messungen/Performance"],
     "meta": {
