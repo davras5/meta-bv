@@ -631,19 +631,23 @@
         .box-title { font-weight: bold; margin-bottom: var(--spacing-xs); font-size: 18px; }
         .box-text { font-size: 16px; font-style: italic; color: #666; }
 
-        /* Responsible Person Rows */
+        /* Responsible Section (white rows with gray lines) */
+        .responsible-section {
+            margin: var(--spacing-xl) 0;
+        }
+        .responsible-section .section-title {
+            margin-top: 0;
+        }
+        .responsible-persons-list {
+            border-top: 1px solid var(--border-light);
+        }
         .responsible-person-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 0;
+            padding: 16px 0;
             border-bottom: 1px solid var(--border-light);
-        }
-        .responsible-person-row:last-child {
-            border-bottom: none;
-        }
-        .responsible-person-row:first-child {
-            padding-top: 8px;
+            background: white;
         }
         .responsible-person-link {
             font-size: 15px;
@@ -1147,9 +1151,13 @@
                         <img id="detail-concept-img" src="" alt="">
                     </div>
                 </div>
-                <div class="responsible-box" id="responsible-box-concept">
+                <div class="responsible-box hidden" id="responsible-placeholder-concept">
                     <div class="box-title">Verantwortliche Personen</div>
-                    <div class="box-content"></div>
+                    <div class="box-text">Niemand fühlt sich für diesen Datensatz zuständig – höchste Zeit, jemandem diese Ehre zu erteilen!</div>
+                </div>
+                <div class="responsible-section hidden" id="responsible-list-concept">
+                    <h3 class="section-title">Verantwortliche Personen</h3>
+                    <div class="responsible-persons-list"></div>
                 </div>
                 <h3 class="section-title">Metadaten</h3>
                 <div class="meta-list" id="detail-concept-meta"></div>
@@ -1182,9 +1190,13 @@
                         <img id="detail-dataset-img" src="" alt="">
                     </div>
                 </div>
-                <div class="responsible-box" id="responsible-box-dataset">
+                <div class="responsible-box hidden" id="responsible-placeholder-dataset">
                     <div class="box-title">Verantwortliche Personen</div>
-                    <div class="box-content"></div>
+                    <div class="box-text">Niemand fühlt sich für diesen Datensatz zuständig – höchste Zeit, jemandem diese Ehre zu erteilen!</div>
+                </div>
+                <div class="responsible-section hidden" id="responsible-list-dataset">
+                    <h3 class="section-title">Verantwortliche Personen</h3>
+                    <div class="responsible-persons-list"></div>
                 </div>
                 <h3 class="section-title">Metadaten</h3>
                 <div class="meta-list" id="detail-dataset-meta"></div>
@@ -1424,12 +1436,20 @@
         }
 
         function renderResponsiblePersons(type, persons) {
-            const container = $(`#responsible-box-${type} .box-content`);
+            const placeholder = $(`#responsible-placeholder-${type}`);
+            const listSection = $(`#responsible-list-${type}`);
+            const listContainer = $(`#responsible-list-${type} .responsible-persons-list`);
 
             if (!persons || persons.length === 0) {
-                container.innerHTML = '<div class="box-text">Niemand fühlt sich für diesen Datensatz zuständig – höchste Zeit, jemandem diese Ehre zu erteilen!</div>';
+                // Show placeholder, hide list
+                placeholder.classList.remove('hidden');
+                listSection.classList.add('hidden');
                 return;
             }
+
+            // Hide placeholder, show list
+            placeholder.classList.add('hidden');
+            listSection.classList.remove('hidden');
 
             const html = persons.map(person => {
                 const admindirUrl = `https://admindir.verzeichnisse.admin.ch/person/${person.admindirId}`;
@@ -1441,7 +1461,7 @@
                 `;
             }).join('');
 
-            container.innerHTML = html;
+            listContainer.innerHTML = html;
         }
 
         // === FILTERING ===
