@@ -388,7 +388,33 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        
+
+        .filter-select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-input);
+            border-radius: var(--radius-sm);
+            background: white;
+            font-size: 14px;
+            font-family: inherit;
+            color: var(--text-dark);
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--text-dark);
+            box-shadow: 0 0 0 1px var(--text-dark);
+        }
+
+        .filter-select:hover {
+            border-color: var(--text-light);
+        }
+
         /* Tag Input Component */
         .tag-input-wrapper {
             position: relative;
@@ -1041,6 +1067,31 @@
                                 <div class="tag-dropdown hidden" id="tag-dropdown-concept"></div>
                             </div>
                         </div>
+                        <div class="filter-section">
+                            <label class="filter-label">Führendes System</label>
+                            <select class="filter-select" id="filter-system-concept" data-type="concept">
+                                <option value="">Alle</option>
+                            </select>
+                        </div>
+                        <div class="filter-section">
+                            <label class="filter-label">Personenbezogene Daten</label>
+                            <select class="filter-select" id="filter-personenbezogen-concept" data-type="concept">
+                                <option value="">Alle</option>
+                                <option value="Keine">Keine</option>
+                                <option value="Personenbezogene Daten">Personenbezogene Daten</option>
+                                <option value="Besonders schützenswerte Personendaten">Besonders schützenswerte Personendaten</option>
+                            </select>
+                        </div>
+                        <div class="filter-section">
+                            <label class="filter-label">Klassifizierung</label>
+                            <select class="filter-select" id="filter-klassifizierung-concept" data-type="concept">
+                                <option value="">Alle</option>
+                                <option value="Öffentlich">Öffentlich</option>
+                                <option value="Intern">Intern</option>
+                                <option value="Vertraulich">Vertraulich</option>
+                                <option value="Geheim">Geheim</option>
+                            </select>
+                        </div>
                     </aside>
                     <div class="catalog-content">
                         <div id="concept-grid" class="grid"></div>
@@ -1103,6 +1154,25 @@
                                 </div>
                                 <div class="tag-dropdown hidden" id="tag-dropdown-dataset"></div>
                             </div>
+                        </div>
+                        <div class="filter-section">
+                            <label class="filter-label">Personenbezogene Daten</label>
+                            <select class="filter-select" id="filter-personenbezogen-dataset" data-type="dataset">
+                                <option value="">Alle</option>
+                                <option value="Keine">Keine</option>
+                                <option value="Personenbezogene Daten">Personenbezogene Daten</option>
+                                <option value="Besonders schützenswerte Personendaten">Besonders schützenswerte Personendaten</option>
+                            </select>
+                        </div>
+                        <div class="filter-section">
+                            <label class="filter-label">Klassifizierung</label>
+                            <select class="filter-select" id="filter-klassifizierung-dataset" data-type="dataset">
+                                <option value="">Alle</option>
+                                <option value="Öffentlich">Öffentlich</option>
+                                <option value="Intern">Intern</option>
+                                <option value="Vertraulich">Vertraulich</option>
+                                <option value="Geheim">Geheim</option>
+                            </select>
                         </div>
                     </aside>
                     <div class="catalog-content">
@@ -1336,7 +1406,10 @@
                 id,
                 tags: params.get('tags')?.split(',').filter(Boolean) || [],
                 view: params.get('view') || 'grid',
-                filter: params.get('filter') === 'open'
+                filter: params.get('filter') === 'open',
+                system: params.get('system') || '',
+                personenbezogen: params.get('personenbezogen') || '',
+                klassifizierung: params.get('klassifizierung') || ''
             };
         }
 
@@ -1348,7 +1421,10 @@
             if (params.tags?.length) urlParams.set('tags', params.tags.join(','));
             if (params.view && params.view !== 'grid') urlParams.set('view', params.view);
             if (params.filter) urlParams.set('filter', 'open');
-            
+            if (params.system) urlParams.set('system', params.system);
+            if (params.personenbezogen) urlParams.set('personenbezogen', params.personenbezogen);
+            if (params.klassifizierung) urlParams.set('klassifizierung', params.klassifizierung);
+
             const queryString = urlParams.toString();
             return queryString ? `${hash}?${queryString}` : hash;
         }
@@ -1361,7 +1437,10 @@
                 {
                     tags: params.tags ?? current.tags,
                     view: params.view ?? current.view,
-                    filter: params.filter ?? current.filter
+                    filter: params.filter ?? current.filter,
+                    system: params.system ?? current.system,
+                    personenbezogen: params.personenbezogen ?? current.personenbezogen,
+                    klassifizierung: params.klassifizierung ?? current.klassifizierung
                 }
             );
             
@@ -1395,6 +1474,10 @@
 
         function clearTags() {
             updateUrl({ tags: [] });
+        }
+
+        function clearAllFilters() {
+            updateUrl({ tags: [], system: '', personenbezogen: '', klassifizierung: '' });
         }
 
         // === FORMATTING UTILITIES ===
@@ -1447,7 +1530,9 @@
         }
 
         // === FILTERING ===
-        function filterItems(items, searchText, tags) {
+        function filterItems(items, searchText, filters) {
+            const { tags = [], system = '', personenbezogen = '', klassifizierung = '' } = filters;
+
             return items.filter(item => {
                 // Text search
                 const text = searchText.toLowerCase();
@@ -1460,8 +1545,23 @@
                 const matchesTags = tags.length === 0 ||
                     tags.every(tag => itemTags.includes(tag));
 
-                return matchesText && matchesTags;
+                // Meta filters (AND logic)
+                const meta = item.meta || {};
+                const matchesSystem = !system || meta.system === system;
+                const matchesPersonenbezogen = !personenbezogen || meta.personenbezogen === personenbezogen;
+                const matchesKlassifizierung = !klassifizierung || meta.klassifizierung === klassifizierung;
+
+                return matchesText && matchesTags && matchesSystem && matchesPersonenbezogen && matchesKlassifizierung;
             });
+        }
+
+        // Helper function to get unique systems from concepts
+        function getUniqueSystems() {
+            const systems = new Set();
+            state.data.concept.forEach(item => {
+                if (item.meta?.system) systems.add(item.meta.system);
+            });
+            return Array.from(systems).sort((a, b) => a.localeCompare(b, 'de'));
         }
 
         // === DATA LOADING ===
@@ -1494,45 +1594,73 @@
 
         // === FILTER PANEL RENDERING ===
         function renderFilterPanel(type) {
-            const { tags, filter } = parseHash();
+            const { tags, filter, system, personenbezogen, klassifizierung } = parseHash();
             const panel = $(`#filter-panel-${type}`);
             const countEl = $(`#filter-count-${type}`);
             const filterBtn = $(`.btn-filter[data-type="${type}"]`);
             const resetBtn = $(`.btn-reset[data-type="${type}"]`);
             const inputField = $(`.tag-input-field[data-type="${type}"]`);
             const searchInput = $(`.tag-search-input[data-type="${type}"]`);
-            
+
             // Update filter panel visibility
             panel.classList.toggle('hidden', !filter);
             state.ui.filterPanelOpen = filter;
-            
+
             // Update filter button active state
             filterBtn.classList.toggle('active', filter);
-            
+
+            // Count active filters (tags + meta filters)
+            let activeFilterCount = tags.length;
+            if (system) activeFilterCount++;
+            if (personenbezogen) activeFilterCount++;
+            if (klassifizierung) activeFilterCount++;
+
             // Update filter count badge
-            if (tags.length > 0) {
-                countEl.textContent = tags.length;
+            if (activeFilterCount > 0) {
+                countEl.textContent = activeFilterCount;
                 countEl.classList.remove('hidden');
             } else {
                 countEl.classList.add('hidden');
             }
-            
+
             // Show/hide reset button based on active filters
-            resetBtn.classList.toggle('hidden', tags.length === 0);
-            
+            resetBtn.classList.toggle('hidden', activeFilterCount === 0);
+
             // Render active tags in input field
             const existingPills = inputField.querySelectorAll('.tag-pill-active');
             existingPills.forEach(pill => pill.remove());
-            
+
             tags.forEach(tag => {
                 const pill = document.createElement('span');
                 pill.className = 'tag-pill-active';
                 pill.innerHTML = `${tag}<span class="remove" data-tag="${tag}">×</span>`;
                 inputField.insertBefore(pill, searchInput);
             });
-            
+
             // Update placeholder
             searchInput.placeholder = tags.length > 0 ? 'Neues Schlüsselwort...' : 'Schlüsselwort wählen...';
+
+            // Populate system dropdown dynamically (only for concepts)
+            if (type === 'concept') {
+                const systemSelect = $(`#filter-system-${type}`);
+                if (systemSelect) {
+                    const systems = getUniqueSystems();
+                    // Keep "Alle" option and add system options
+                    systemSelect.innerHTML = '<option value="">Alle</option>' +
+                        systems.map(s => `<option value="${s}"${s === system ? ' selected' : ''}>${s}</option>`).join('');
+                }
+            }
+
+            // Set dropdown values from URL
+            const personenbezogenSelect = $(`#filter-personenbezogen-${type}`);
+            if (personenbezogenSelect) {
+                personenbezogenSelect.value = personenbezogen;
+            }
+
+            const klassifizierungSelect = $(`#filter-klassifizierung-${type}`);
+            if (klassifizierungSelect) {
+                klassifizierungSelect.value = klassifizierung;
+            }
         }
 
         function renderTagDropdown(type, filterText = '') {
@@ -1557,9 +1685,9 @@
 
         // === CATALOG RENDERING ===
         function renderCatalog(type) {
-            const { tags, view } = parseHash();
+            const { tags, view, system, personenbezogen, klassifizierung } = parseHash();
             const searchText = $(`#search-${type}`)?.value || '';
-            const items = filterItems(state.data[type], searchText, tags);
+            const items = filterItems(state.data[type], searchText, { tags, system, personenbezogen, klassifizierung });
             const isGrid = view === 'grid';
             
             // Update view state
@@ -1891,7 +2019,7 @@
             document.addEventListener('click', e => {
                 const resetBtn = e.target.closest('.filter-reset');
                 if (resetBtn) {
-                    clearTags();
+                    clearAllFilters();
                 }
             });
 
@@ -1899,7 +2027,22 @@
             document.addEventListener('click', e => {
                 const resetBtn = e.target.closest('.btn-reset');
                 if (resetBtn) {
-                    clearTags();
+                    clearAllFilters();
+                }
+            });
+
+            // Filter dropdown change handlers
+            document.addEventListener('change', e => {
+                const select = e.target.closest('.filter-select');
+                if (select) {
+                    const id = select.id;
+                    if (id.startsWith('filter-system-')) {
+                        updateUrl({ system: select.value });
+                    } else if (id.startsWith('filter-personenbezogen-')) {
+                        updateUrl({ personenbezogen: select.value });
+                    } else if (id.startsWith('filter-klassifizierung-')) {
+                        updateUrl({ klassifizierung: select.value });
+                    }
                 }
             });
 
