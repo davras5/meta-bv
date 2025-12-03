@@ -488,7 +488,7 @@
     "title": "Geodaten: Gebäude (GIS IMMO)",
     "description": "Geodaten aller Gebäude im Portfolio des Bundes aus dem GIS IMMO.",
     "fullDescription": "Dieser Datensatz enthält die Geodaten aller Gebäude im Portfolio des Bundes aus dem Geo-Informationssystem (GIS IMMO). Er umfasst die exakten Standorte und geometrischen Umrisse (Gebäudepolygone) der Bauten. Die Daten dienen als Grundlage für räumliche Analysen, kartografische Darstellungen und die Standortplanung. Es ist die geografische Ergänzung zu den alphanumerischen Stammdaten der Gebäude aus dem ERP.",
-    "image": "images/datasets/Placeholder.jpg",
+    "image": "images/datasets/GIS Gebäude.jpg",
     "tags": ["Gebäude", "GIS IMMO"],
     "meta": {
       "kontaktstelle": "gis@bbl.admin.ch",
