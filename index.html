@@ -1275,10 +1275,10 @@
             },
             metaFields: {
                 concept: [
-                    { key: 'fachliche_id', label: 'ID', type: 'pill' },
+                    { key: 'fachliche_id', label: 'ID', type: 'text' },
                     { key: 'termdat', label: 'TERMDAT', type: 'link' },
                     { key: 'fachbereich', label: 'Fachbereich', type: 'text' },
-                    { key: 'system', label: 'Führendes System', type: 'text' },
+                    { key: 'system', label: 'Führendes System', type: 'pill' },
                     { key: 'klassifizierung', label: 'Klassifizierung', type: 'pill' },
                     { key: 'personenbezogen', label: 'Personenbezogene Daten', type: 'pill' },
                     { key: 'kommentar', label: 'Kommentar', type: 'text' },
@@ -1671,9 +1671,9 @@
                 ? item.attributes.map(a => `
                     <tr>
                         <td>${a.name}</td>
-                        <td><span class="tag-pill">${a.format}</span></td>
-                        <td>${a.key === '-' ? '-' : `<span class="tag-pill">${a.key}</span>`}</td>
-                        <td>${a.list === '-' ? '-' : `<span class="tag-pill">${a.list}</span>`}</td>
+                        <td>${a.format}</td>
+                        <td>${a.key}</td>
+                        <td>${a.list}</td>
                         <td>${a.desc}</td>
                     </tr>
                 `).join('')
