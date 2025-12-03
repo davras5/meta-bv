@@ -4,7 +4,7 @@
     "title": "Gebäude (SAP Liegenschafteninventar)",
     "description": "Stammdaten aller Gebäude im Portfolio des Bundes mit Adressen, EGID, Nutzungstyp und Zustandsbewertungen.",
     "fullDescription": "Dieser Datensatz umfasst die Stammdaten aller Gebäude im Portfolio des Bundes. Er enthält grundlegende Informationen wie Adressen, offizielle Gebäudenummern (EGID), Nutzungstyp, Baujahr, Flächenangaben und Zustandsbewertungen. Die Daten dienen als Grundlage für das Bestandsmanagement, die Planung von Instandhaltungsmassnahmen und das strategische Reporting. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
-    "image": "images/datasets/Placeholder.jpg",
+    "image": "images/datasets/SAP Gebäude.jpg",
     "tags": ["Gebäude", "ERP IMMO"],
     "meta": {
       "kontaktstelle": "info@bbl.admin.ch",
@@ -57,7 +57,7 @@
     "title": "Grundstücke (SAP Liegenschafteninventar)",
     "description": "Enthält die Stammdaten aller Grundstücke im Eigentum oder in der Verwaltung des Bundes.",
     "fullDescription": "Enthält die Stammdaten aller Grundstücke im Eigentum oder in der Verwaltung des Bundes. Der Datensatz umfasst amtliche Informationen wie Parzellennummern, Flächenangaben, Zonenart und Eigentumsverhältnisse. Diese Daten bilden die Grundlage für die rechtliche und administrative Verwaltung des Landbesitzes und die Portfolioentwicklung. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
-    "image": "images/datasets/Placeholder.jpg",
+    "image": "images/datasets/SAP Grundstück.jpg",
     "tags": ["Grundstück", "ERP IMMO"],
     "meta": {
       "kontaktstelle": "info@bbl.admin.ch",
@@ -109,7 +109,7 @@
     "title": "Bauprojekte (SAP Projektcontrolling)",
     "description": "Führt alle Neu- und Umbauprojekte, die vom Bund verantwortet werden.",
     "fullDescription": "Führt alle Neu- und Umbauprojekte, die vom Bund verantwortet werden. Der Datensatz beinhaltet dynamische Informationen zu Projektbezeichnung, Standort, Projektart (Neubau, Sanierung), Budget, Zeitplänen (Soll/Ist) und dem aktuellen Projektstatus. Er ist die zentrale Quelle für das Projektcontrolling, die Ressourcenplanung und die strategische Bauplanung. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
-    "image": "images/datasets/Placeholder.jpg",
+    "image": "images/datasets/SAP Bauprojekte.jpg",
     "tags": ["Bauprojekt", "ERP IMMO"],
     "meta": {
       "kontaktstelle": "projekte@bbl.admin.ch",
@@ -159,7 +159,7 @@
     "title": "Mietverträge (SAP RE-FX)",
     "description": "Alle Miet- und Pachtverträge des Bundes als Mieter oder Vermieter.",
     "fullDescription": "Dieser Datensatz listet alle Miet- und Pachtverträge, bei denen der Bund als Mieter oder Vermieter auftritt. Erfasst sind Vertragsdetails wie Parteien, Mietobjekt, Laufzeiten, Mietzinse und Zahlungskonditionen. Die Daten sind essenziell für die kaufmännische Vertragsverwaltung, die Finanzbuchhaltung und das Belegungsmanagement. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
-    "image": "images/datasets/Placeholder.jpg",
+    "image": "images/datasets/SAP Mietverträge.jpg",
     "tags": ["Mietvertrag", "ERP IMMO"],
     "meta": {
       "kontaktstelle": "vertraege@bbl.admin.ch",
@@ -206,7 +206,7 @@
     "title": "Gebäudetechnische Anlagen (SAP PM)",
     "description": "Inventar der technischen Grossanlagen in den Gebäuden des Bundes.",
     "fullDescription": "Inventar der technischen Grossanlagen in den Gebäuden des Bundes. Der Datensatz umfasst Systeme wie Heizungs-, Lüftungs- und Klimaanlagen (HLK), Aufzüge, Sicherheits- und Elektroanlagen. Enthalten sind Informationen zu Anlagentyp, Standort, Hersteller, Inbetriebnahmedatum und Wartungszyklen. Dient als Grundlage für das Facility Management, die Planung der Instandhaltung und die Sicherstellung des Betriebs. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
-    "image": "images/datasets/Placeholder.jpg",
+    "image": "images/datasets/SAP Technische Anlage.jpg",
     "tags": ["Tag 1", "Tag 2"],
     "meta": {
       "kontaktstelle": "technik@bbl.admin.ch",
@@ -394,7 +394,7 @@
     "title": "Bauwerksdokumentation (Planarchiv DALA)",
     "description": "Metadaten-Auszug aus dem digitalen Planarchiv DALA.",
     "fullDescription": "Dieser Datensatz ist ein Metadaten-Auszug aus dem digitalen Planarchiv \"DALA\". Er enthält beschreibende Informationen zu archivierten Bauwerksdokumenten wie Grundrissen, Schnitten, Ansichten und technischen Schemata. Erfasst sind Attribute wie Dokumententyp, zugehöriges Gebäude/Bauprojekt, Erstellungsdatum und Planverfasser. Der Datensatz dient der Recherche und Identifikation von Plänen; er enthält nicht die Dokumente selbst, sondern den Verweis darauf.",
-    "image": "images/datasets/Placeholder.jpg",
+    "image": "images/datasets/DALA.jpg",
     "tags": ["Dokument", "Planarchiv DALA"],
     "meta": {
       "kontaktstelle": "archiv@bbl.admin.ch",
