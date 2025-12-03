@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "Gebäude (SAP Liegenschafteninventar)",
-    "description": "Dieser Datensatz umfasst die Stammdaten aller Gebäude im Portfolio des Bundes. Er enthält grundlegende Informationen wie Adressen, offizielle Gebäudenummern (EGID), Nutzungstyp, Baujahr, Flächenangaben und Zustandsbewertungen.",
+    "description": "Stammdaten aller Gebäude im Portfolio des Bundes mit Adressen, EGID, Nutzungstyp und Zustandsbewertungen.",
     "fullDescription": "Dieser Datensatz umfasst die Stammdaten aller Gebäude im Portfolio des Bundes. Er enthält grundlegende Informationen wie Adressen, offizielle Gebäudenummern (EGID), Nutzungstyp, Baujahr, Flächenangaben und Zustandsbewertungen. Die Daten dienen als Grundlage für das Bestandsmanagement, die Planung von Instandhaltungsmassnahmen und das strategische Reporting. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
     "image": "images/datasets/Placeholder.jpg",
     "topTags": ["Datensatz", "BBL"],
@@ -153,7 +153,7 @@
   {
     "id": "4",
     "title": "Mietverträge (SAP RE-FX)",
-    "description": "Dieser Datensatz listet alle Miet- und Pachtverträge, bei denen der Bund als Mieter oder Vermieter auftritt.",
+    "description": "Alle Miet- und Pachtverträge des Bundes als Mieter oder Vermieter.",
     "fullDescription": "Dieser Datensatz listet alle Miet- und Pachtverträge, bei denen der Bund als Mieter oder Vermieter auftritt. Erfasst sind Vertragsdetails wie Parteien, Mietobjekt, Laufzeiten, Mietzinse und Zahlungskonditionen. Die Daten sind essenziell für die kaufmännische Vertragsverwaltung, die Finanzbuchhaltung und das Belegungsmanagement. Die Datenbasis wird monatlich aus dem ERP-System aktualisiert.",
     "image": "images/datasets/Placeholder.jpg",
     "topTags": ["Datensatz", "BBL"],
@@ -251,7 +251,7 @@
   {
     "id": "6",
     "title": "Projektdaten: Bauprojekte (CDE Bund)",
-    "description": "Stellt die Metadaten der Projekte aus der zentralen Kollaborationsplattform Common Data Environment (CDE) des Bundes bereit.",
+    "description": "Metadaten der Bauprojekte aus der Kollaborationsplattform CDE Bund.",
     "fullDescription": "Stellt die Metadaten der Projekte aus der zentralen Kollaborationsplattform Common Data Environment (CDE) des Bundes bereit. Diese Plattform dient dem Austausch von BIM-Modellen, Plänen und technischen Dokumenten während der Planungs- und Ausführungsphase. Der Datensatz enthält Informationen über Projektstruktur, Beteiligte, Dokumentenstatus und Freigabeprozesse und bildet die Grundlage für das digitale Projektmanagement.",
     "image": "images/datasets/Placeholder.jpg",
     "topTags": ["Datensatz", "BBL"],
@@ -300,7 +300,7 @@
   {
     "id": "7",
     "title": "Geodaten: Bauprojekte (GIS IMMO)",
-    "description": "Dieser Datensatz visualisiert Bauprojekte als Geometrien im Geo-Informationssystem.",
+    "description": "Visualisiert Bauprojekte als Geometrien im GIS.",
     "fullDescription": "Dieser Datensatz visualisiert Bauprojekte als Geometrien im Geo-Informationssystem. Erfasst wird der Projektperimeter, also der räumliche Geltungsbereich eines Bauvorhabens. Die Daten ermöglichen die kartografische Darstellung von aktuellen und geplanten Baustellen, die Analyse der räumlichen Auswirkungen und die Koordination mit anderen Infrastrukturprojekten. Es ist die geografische Sicht auf die Projektdaten aus dem ERP.",
     "image": "images/datasets/Placeholder.jpg",
     "topTags": ["Datensatz", "BBL"],
@@ -349,7 +349,7 @@
   {
     "id": "8",
     "title": "Geodaten: Bodenabdeckung (GIS IMMO)",
-    "description": "Dieser Datensatz analysiert die Flächenanteile der Bodenbedeckung auf den Grundstücken des Bundes.",
+    "description": "Flächenanteile der Bodenbedeckung auf den Grundstücken des Bundes.",
     "fullDescription": "Dieser Datensatz analysiert die Flächenanteile der Bodenbedeckung auf den Grundstücken des Bundes. Er wird durch eine räumliche Verschneidung der eigenen Grundstücks-Geometrien mit den Daten der Amtlichen Vermessung (AV) der Schweiz generiert. Das Resultat sind exakte Bemessungen für verschiedene Nutzungsarten wie Gebäudegrundflächen, versiegelte Flächen (z.B. Parkplätze), Grünflächen und offene Flächen. Die Daten sind eine wichtige Grundlage für Umwelt-Reportings, die Berechnung von Nachhaltigkeitskennzahlen (z.B. Versiegelungsgrad) und die operative Liegenschaftsverwaltung.",
     "image": "images/datasets/Placeholder.jpg",
     "topTags": ["Datensatz", "BBL"],
@@ -398,7 +398,7 @@
   {
     "id": "9",
     "title": "Bauwerksdokumentation (Planarchiv DALA)",
-    "description": "Dieser Datensatz ist ein Metadaten-Auszug aus dem digitalen Planarchiv \"DALA\".",
+    "description": "Metadaten-Auszug aus dem digitalen Planarchiv DALA.",
     "fullDescription": "Dieser Datensatz ist ein Metadaten-Auszug aus dem digitalen Planarchiv \"DALA\". Er enthält beschreibende Informationen zu archivierten Bauwerksdokumenten wie Grundrissen, Schnitten, Ansichten und technischen Schemata. Erfasst sind Attribute wie Dokumententyp, zugehöriges Gebäude/Bauprojekt, Erstellungsdatum und Planverfasser. Der Datensatz dient der Recherche und Identifikation von Plänen; er enthält nicht die Dokumente selbst, sondern den Verweis darauf.",
     "image": "images/datasets/Placeholder.jpg",
     "topTags": ["Datensatz", "BBL"],
@@ -447,7 +447,7 @@
   {
     "id": "10",
     "title": "Geodaten: Grundstücke (GIS IMMO)",
-    "description": "Stellt die Geometrien und geografischen Lagedaten aller Grundstücke im Besitz des Bundes zur Verfügung.",
+    "description": "Geometrien und Lagedaten aller Grundstücke im Besitz des Bundes.",
     "fullDescription": "Stellt die Geometrien und geografischen Lagedaten aller Grundstücke im Besitz des Bundes zur Verfügung. Der Datensatz aus dem GIS beinhaltet die exakten Parzellengrenzen und ist mit den Daten der amtlichen Vermessung verknüpft. Er wird für die visuelle Darstellung des Landbesitzes, für die strategische Arealentwicklung und für räumliche Analysen genutzt.",
     "image": "images/datasets/Placeholder.jpg",
     "topTags": ["Datensatz", "BBL"],
@@ -496,7 +496,7 @@
   {
     "id": "11",
     "title": "Geodaten: Gebäude (GIS IMMO)",
-    "description": "Dieser Datensatz enthält die Geodaten aller Gebäude im Portfolio des Bundes aus dem Geo-Informationssystem (GIS IMMO).",
+    "description": "Geodaten aller Gebäude im Portfolio des Bundes aus dem GIS IMMO.",
     "fullDescription": "Dieser Datensatz enthält die Geodaten aller Gebäude im Portfolio des Bundes aus dem Geo-Informationssystem (GIS IMMO). Er umfasst die exakten Standorte und geometrischen Umrisse (Gebäudepolygone) der Bauten. Die Daten dienen als Grundlage für räumliche Analysen, kartografische Darstellungen und die Standortplanung. Es ist die geografische Ergänzung zu den alphanumerischen Stammdaten der Gebäude aus dem ERP.",
     "image": "images/datasets/Placeholder.jpg",
     "topTags": ["Datensatz", "BBL"],
