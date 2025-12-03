@@ -17,9 +17,14 @@
       "version": "V 1.0"
     },
     "standards": [
-      { "name": "ISO 16739 (IFC)", "value": "IfcTransportElement" },
-      { "name": "eBKP-H", "value": "D8.1" },
-      { "name": "DIN 276", "value": "461" }
+      { "name": "ISO 16739 (IFC)", "value": "IfcTransportElement.ELEVATOR" },
+      { "name": "eBKP-H 2020", "value": [
+        "D8 - Beförderungsanlagen",
+        "D8.1 - Personenaufzüge",
+        "D8.2 - Lastenaufzüge",
+        "D8.3 - Fahrtreppen und Fahrsteige"
+      ]},
+      { "name": "DIN 276", "value": "461 - Aufzugsanlagen" }
     ],
     "attributes": [
       { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation der Aufzugsanlage" },
@@ -51,8 +56,13 @@
     },
     "standards": [
       { "name": "ISO 16739 (IFC)", "value": "IfcSite" },
-      { "name": "eBKP-H", "value": "A" },
-      { "name": "DIN 276", "value": "100" }
+      { "name": "eBKP-H 2020", "value": [
+        "A - Grundstück",
+        "A1 - Grundstückserwerb",
+        "A2 - Räumung",
+        "A3 - Altlasten"
+      ]},
+      { "name": "DIN 276", "value": "100 - Grundstück" }
     ],
     "attributes": [
       { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation des Grundstücks" },
@@ -85,8 +95,16 @@
     },
     "standards": [
       { "name": "ISO 16739 (IFC)", "value": "IfcGeographicElement" },
-      { "name": "eBKP-H", "value": "B" },
-      { "name": "DIN 276", "value": "200" }
+      { "name": "eBKP-H 2020", "value": [
+        "B - Umgebung",
+        "B1 - Vorbereitungsarbeiten",
+        "B2 - Umgebungsgestaltung",
+        "B3 - Bepflanzung"
+      ]},
+      { "name": "DIN 276", "value": [
+        "200 - Vorbereitende Massnahmen",
+        "510 - Aussenanlagen"
+      ]}
     ],
     "attributes": [
       { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation der Bodenabdeckung" },
@@ -114,9 +132,16 @@
       "version": "V 1.0"
     },
     "standards": [
-      { "name": "ISO 16739 (IFC)", "value": "IfcLightFixture" },
-      { "name": "eBKP-H", "value": "D5.3" },
-      { "name": "DIN 276", "value": "445" }
+      { "name": "ISO 16739 (IFC)", "value": [
+        "IfcLightFixture",
+        "IfcLamp"
+      ]},
+      { "name": "eBKP-H 2020", "value": [
+        "D5 - Elektroanlagen",
+        "D5.3 - Beleuchtungsanlagen",
+        "D5.4 - Sicherheitsbeleuchtung"
+      ]},
+      { "name": "DIN 276", "value": "445 - Beleuchtungsanlagen" }
     ],
     "attributes": [
       { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation der Beleuchtungsanlage" },
@@ -145,8 +170,15 @@
     },
     "standards": [
       { "name": "ISO 16739 (IFC)", "value": "IfcBuilding" },
-      { "name": "eBKP-H", "value": "C" },
-      { "name": "DIN 276", "value": "300" }
+      { "name": "eBKP-H 2020", "value": [
+        "C - Konstruktion Gebäude",
+        "D - Technik Gebäude",
+        "E - Äussere Wandbekleidung Gebäude"
+      ]},
+      { "name": "DIN 276", "value": [
+        "300 - Bauwerk - Baukonstruktionen",
+        "400 - Bauwerk - Technische Anlagen"
+      ]}
     ],
     "attributes": [
       { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation des Gebäudes" },
@@ -178,8 +210,13 @@
     },
     "standards": [
       { "name": "ISO 16739 (IFC)", "value": "IfcBuildingStorey" },
-      { "name": "eBKP-H", "value": "C1" },
-      { "name": "DIN 276", "value": "350" }
+      { "name": "eBKP-H 2020", "value": [
+        "C1 - Rohbau 1 (Untergeschoss)",
+        "C2 - Rohbau 2 (Obergeschoss)",
+        "C3 - Dachkonstruktion"
+      ]},
+      { "name": "DIN 276", "value": "350 - Deckenkonstruktionen" },
+      { "name": "SIA 416", "value": "Flächen und Volumen von Gebäuden" }
     ],
     "attributes": [
       { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation des Geschosses" },
@@ -207,9 +244,28 @@
       "version": "V 1.0"
     },
     "standards": [
-      { "name": "ISO 16739 (IFC)", "value": "IfcBuildingElement" },
-      { "name": "eBKP-H", "value": "C4" },
-      { "name": "DIN 276", "value": "330" }
+      { "name": "ISO 16739 (IFC)", "value": [
+        "IfcWall - Wand",
+        "IfcSlab - Decke/Bodenplatte",
+        "IfcDoor - Tür",
+        "IfcWindow - Fenster",
+        "IfcColumn - Stütze",
+        "IfcBeam - Träger"
+      ]},
+      { "name": "eBKP-H 2020", "value": [
+        "C4 - Rohbau Elemente",
+        "C4.1 - Aussenwände",
+        "C4.2 - Innenwände",
+        "C4.3 - Stützen",
+        "C4.4 - Decken",
+        "G2 - Fenster und Aussentüren"
+      ]},
+      { "name": "DIN 276", "value": [
+        "330 - Aussenwände",
+        "340 - Innenwände",
+        "350 - Decken",
+        "360 - Dächer"
+      ]}
     ],
     "attributes": [
       { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation des Bauteils" },
@@ -237,9 +293,15 @@
       "version": "V 1.0"
     },
     "standards": [
-      { "name": "ISO 16739 (IFC)", "value": "IfcQuantitySet" },
+      { "name": "ISO 16739 (IFC)", "value": [
+        "IfcQuantitySet",
+        "IfcElementQuantity"
+      ]},
       { "name": "SIA 416", "value": "Flächen und Volumen von Gebäuden" },
-      { "name": "DIN 277", "value": "Grundflächen und Rauminhalte" }
+      { "name": "DIN 277", "value": [
+        "DIN 277-1 - Grundflächen und Rauminhalte im Hochbau",
+        "DIN 277-2 - Gliederung der Nettogrundfläche"
+      ]}
     ],
     "attributes": [
       { "name": "Fachliche ID", "format": "Text", "key": "PK", "list": "-", "desc": "Eindeutige Identifikation der Bemessung" },

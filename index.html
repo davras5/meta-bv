@@ -1660,9 +1660,14 @@
         }
 
         function renderConceptSpecific(item) {
-            // Standards
+            // Standards - support for array values (multiple values per standard)
             const stdHtml = item.standards?.length
-                ? item.standards.map(s => createDataRow(s.name, s.value)).join('')
+                ? item.standards.map(s => {
+                    const displayValue = Array.isArray(s.value)
+                        ? s.value.join('<br>')
+                        : s.value;
+                    return createDataRow(s.name, displayValue);
+                }).join('')
                 : '<div class="data-row">Keine Standards definiert</div>';
             $('#detail-concept-standards').innerHTML = stdHtml;
 
