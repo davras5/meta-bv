@@ -12,7 +12,7 @@
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
       "klassifizierung": "Öffentlich",
-      "personenbezogen": "Nein",
+      "personenbezogen": "Keine",
       "kommentar": "Vertikale Transportanlagen gemäss SIA 370",
       "version": "V 1.0"
     },
@@ -50,7 +50,7 @@
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
       "klassifizierung": "Öffentlich",
-      "personenbezogen": "Nein",
+      "personenbezogen": "Keine",
       "kommentar": "Grundstücksdefinition gemäss ZGB",
       "version": "V 1.0"
     },
@@ -89,7 +89,7 @@
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
       "klassifizierung": "Öffentlich",
-      "personenbezogen": "Nein",
+      "personenbezogen": "Keine",
       "kommentar": "Klassifikation gemäss amtlicher Vermessung",
       "version": "V 1.0"
     },
@@ -127,7 +127,7 @@
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
       "klassifizierung": "Öffentlich",
-      "personenbezogen": "Nein",
+      "personenbezogen": "Keine",
       "kommentar": "Beleuchtungsplanung gemäss SIA 387/4",
       "version": "V 1.0"
     },
@@ -164,7 +164,7 @@
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
       "klassifizierung": "Öffentlich",
-      "personenbezogen": "Nein",
+      "personenbezogen": "Keine",
       "kommentar": "Gebäudedefinition gemäss VGWR",
       "version": "V 1.0"
     },
@@ -204,7 +204,7 @@
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
       "klassifizierung": "Öffentlich",
-      "personenbezogen": "Nein",
+      "personenbezogen": "Keine",
       "kommentar": "Geschossdefinition gemäss SIA 416",
       "version": "V 1.0"
     },
@@ -239,7 +239,7 @@
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
       "klassifizierung": "Öffentlich",
-      "personenbezogen": "Nein",
+      "personenbezogen": "Keine",
       "kommentar": "Bauteilklassifikation gemäss SIA",
       "version": "V 1.0"
     },
@@ -288,7 +288,7 @@
       "fachbereich": "Immobilienmanagement, Bundesamt für Bauten und Logistik BBL",
       "system": "ERP SAP RE-FX",
       "klassifizierung": "Öffentlich",
-      "personenbezogen": "Nein",
+      "personenbezogen": "Keine",
       "kommentar": "Flächenberechnung gemäss SIA 416",
       "version": "V 1.0"
     },
