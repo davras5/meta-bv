@@ -2,7 +2,7 @@
 
 A data catalog for the Swiss Federal Office for Buildings and Logistics (BBL). Documents business objects and datasets according to the DCAT-AP CH v3.0 standard.
 
-**Live Demo:** https://davras5.github.io/meta-bv/
+- Deployed: https://davras5.github.io/meta-bv/
 
 ![Preview](images/readme/Preview.JPG)
 
