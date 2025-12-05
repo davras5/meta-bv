@@ -57,7 +57,7 @@ meta-bv/
 
 ## License
 
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+[MIT](https://opensource.org/licenses/MIT)
 
 ---
 
